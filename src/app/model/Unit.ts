@@ -8,4 +8,5 @@ export class Unit {
   public  idUnit: string
   public  craneId: string
   public dateOfMove: Date;
+  public dateOfMoveSIM: Date;
   }

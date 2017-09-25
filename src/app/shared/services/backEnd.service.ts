@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { IVesselVisit } from './../../model/IVesselVisit';
 import 'rxjs/add/operator/catch';
 import { Subject } from 'rxjs/Subject';
 
@@ -37,13 +36,13 @@ private wsService: WebSocketService;
     return result;
   }
 
-  getVeselVisitTest(): Observable<IVesselVisit> {
+  getVeselVisitTest(): Observable<VesselVisit> {
     let result$ = this.http.get(this.baseUrl + '/values/GetVesselVisitTest/')
       .map(m => <VesselVisit>m.json());
     return result$;
   }
 
-  getVeselVisitLocal(): Observable<IVesselVisit> {
+  getVeselVisitLocal(): Observable<VesselVisit> {
 
 
     let result$ = this.http.get('https://my-json-server.typicode.com/joreava/webapiTest/VesselVisit')
@@ -51,7 +50,7 @@ private wsService: WebSocketService;
     return result$;
   }
 
-  getVeselVisitN4(): Observable<IVesselVisit> {
+  getVeselVisitN4(): Observable<VesselVisit> {
 
     let result$ = this.http.get('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/VesselVisit/')
       .map(m => <VesselVisit>m.json());
@@ -59,22 +58,31 @@ private wsService: WebSocketService;
   }
 
 
-  sendUnit(unitId: string): Observable<boolean> {
+  sendUnit(unitId: string, dateSim: Date): Observable<boolean> {
     let headers = new Headers({ 'Content-Type': 'text/xml' });
     let options = new RequestOptions({ headers: headers });
-    this.xmlstring = '<payload><additional-info><field id=\'visitId\' value=\'1GM1405\' /><field id=\'requestType\' value=\'UNIT_LOAD\' /><field id=\'action\' value=\'update\' /><field id=\'visitType\' value=\'VESSEL\' /><field id=\'ExecutedUnitTime\' value=\'' + dateToYMD(new Date()) + '\' /></additional-info><unit id=\'' + unitId + '\' gross-weight=\'1900.0\' iso-code=\'22G1\' length-mm=\'6068\' height-mm=\'2591\' width-mm=\'2438\' is-hazardous=\'false\' tank-rail-type=\'UNKNOWN\' incompatibility-reason=\'NONE\'><current-position loc-type=\'VESSEL\' location=\'1GM1405\' block=\'A\' row=\'61\' column=\'11\' tier=\'88\' /><flags><permission id=\'RTO_CAT_E_OR_T_NOT_LANDSIDE_OUT\' /><permission id=\'VGM_REQUIRED\' /><permission id=\'PREAN_RECEIVE_PRM\' /><permission id=\'RTO_PP\' /><permission id=\'RTO_PD\' /><permission id=\'PREAN_ DELIVER_PRM\' /><permission id=\'RTO_CB\' /><permission id=\'LINE_LOAD\' /></flags></unit></payload>';
+    this.xmlstring = '<payload><additional-info><field id=\'visitId\' value=\'1GM1405\' /><field id=\'requestType\' value=\'UNIT_LOAD\' /><field id=\'action\' value=\'update\' /><field id=\'visitType\' value=\'VESSEL\' /><field id=\'ExecutedUnitTime\' value=\'' + dateToYMD(new Date(dateSim)) + '\' /></additional-info><unit id=\'' + unitId + '\' gross-weight=\'1900.0\' iso-code=\'22G1\' length-mm=\'6068\' height-mm=\'2591\' width-mm=\'2438\' is-hazardous=\'false\' tank-rail-type=\'UNKNOWN\' incompatibility-reason=\'NONE\'><current-position loc-type=\'VESSEL\' location=\'1GM1405\' block=\'A\' row=\'61\' column=\'11\' tier=\'88\' /><flags><permission id=\'RTO_CAT_E_OR_T_NOT_LANDSIDE_OUT\' /><permission id=\'VGM_REQUIRED\' /><permission id=\'PREAN_RECEIVE_PRM\' /><permission id=\'RTO_PP\' /><permission id=\'RTO_PD\' /><permission id=\'PREAN_ DELIVER_PRM\' /><permission id=\'RTO_CB\' /><permission id=\'LINE_LOAD\' /></flags></unit></payload>';
 
     // tslint:disable-next-line:max-line-length
-    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/xvelaLoadDschUnit/', this.xmlstring, options) // ...using post request
-      .map((res: Response) => { res.json(); console.log(res); }) // ...and calling .json() on the response to return data
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/xvelaLoadDschUnitSIM/', this.xmlstring, options) // ...using post request
+      .map((res: Response) => { console.log(res); }) // ...and calling .json() on the response to return data
       .catch((error: any) => Observable.throw(error.json().error || 'Server error')); // ...errors if any
 
   }
+  startSimulator()
+  {
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/startSimulator/'," ") // ...using post request
+    .map((res: Response) => { console.log(res); });
+  }
 
+  stopSimulator()
+  {
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/stopSimulator/'," ") // ...using post request
+    .map((res: Response) => { console.log(res); });
+  }
 
   connectToSocket()
   {
-    // 1. subscribe to chatbox
 		this.vesselVisitSubject   = <Subject<VesselVisit>>this.wsService
     .connect(CHAT_URL)
     .map((response: MessageEvent): VesselVisit => {
