@@ -22,12 +22,7 @@ export class CraneComponent implements OnInit, OnDestroy  {
   @ViewChild('intervalSpeed') inpSimSpeed: ElementRef;
   @ViewChild('initDelay') inpInitDelay: ElementRef;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
-
-
   }
-
- 
-
   ngOnInit() {
     this.vesselToCraneService.notifyObservable$.subscribe(data => this.SimChanged(data));
     this.totalUnits = this.crane.unitPlannedList.length;
@@ -36,7 +31,10 @@ export class CraneComponent implements OnInit, OnDestroy  {
 
   ngOnDestroy() {
     clearInterval(this.interval);
-    this.subscription.unsubscribe();
+    if (this.subscription != null)
+    {
+      this.subscription.unsubscribe();
+    }
   }
 
   SimChanged(start: boolean)

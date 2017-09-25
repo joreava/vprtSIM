@@ -44,7 +44,7 @@ private wsService: WebSocketService;
 
   getVeselVisitLocal(): Observable<VesselVisit> {
 
-
+    //JSONPlaceholder 
     let result$ = this.http.get('https://my-json-server.typicode.com/joreava/webapiTest/VesselVisit')
       .map(m => <VesselVisit>m.json());
     return result$;
@@ -52,11 +52,17 @@ private wsService: WebSocketService;
 
   getVeselVisitN4(): Observable<VesselVisit> {
 
-    let result$ = this.http.get('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/VesselVisit/')
+    let result$ = this.http.get('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/vesselVisit/')
       .map(m => <VesselVisit>m.json());
     return result$;
   }
 
+  clearVesselVisit(): Observable<any>
+  {
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/clearVesselVisit/', null) // ...using post request
+    .map((res: Response) => { console.log(res); }) // ...and calling .json() on the response to return data
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error')); // ...errors if any
+  }
 
   sendUnit(unitId: string, dateSim: Date): Observable<boolean> {
     let headers = new Headers({ 'Content-Type': 'text/xml' });
@@ -94,6 +100,24 @@ private wsService: WebSocketService;
       }
     });
   }
+
+ getXvelaVesselReadySim(): Observable<any>
+ {
+  
+  return this.http.get('./src/assets/xvelaVesselReady.xml');
+
+ }
+sendXvelaFile(xmlBody): Observable<boolean>
+{
+  let headers = new Headers({ 'Content-Type': 'text/xml' });
+  let options = new RequestOptions({ headers: headers });
+  return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/xvelaVesselReadySIM/', xmlBody, options)
+  .map((res) => {  console.log('RESPONSE'+res) }) // ...and calling .json() on the response to return data
+  .catch((error: any) => 
+  Observable.throw(error.json().error || 'Server error')); // ...errors if any
+}
+
+
 
 }
 

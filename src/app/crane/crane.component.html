@@ -1,3 +1,4 @@
+
 <div class="container" (startEvent)="startEvent($event)">
 
   <div class="row">
@@ -7,16 +8,15 @@
 
    <!-- <button type="button" class="btn btn-success" (click)="OnStartSim()">Start Crane</button>
     <button type="button" class="btn btn-danger" (click)="OnStopSim()">Stop Crane</button>-->
-    <hr>
-    <div class="container">
-
-   
+    
+    <div class="col-md-2">
+    <div class="form-group">
         <label for="name">Sim speed</label>
-        <input #intervalSpeed type="text" size="5" value="15">
-        <label for="name">Init delay</label>
-        <input #initDelay type="text" size="5" value="15"> (min)
+        <input #intervalSpeed type="text" class="form-control" size="5" value="15">
+        <label for="name">Init delay (min)</label>
+        <input #initDelay type="text" class="form-control" value="15">
       </div>
-  
+    </div>
   </div>
   
   <div class="row">
@@ -61,4 +61,4 @@
 </div>
 
 </div>
-
+<hr>
