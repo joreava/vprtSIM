@@ -37,7 +37,6 @@ export class VesselVisit{
     setDates()
     {
         let dateList: Date[] = new Array<Date>();
-        alert(this.craneList.length)
         this.craneList.forEach(cr => {
             cr.unitPlannedList.forEach(u => {
                 dateList.push(new Date(u.dateOfMove));

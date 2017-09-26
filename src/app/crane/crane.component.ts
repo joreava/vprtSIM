@@ -26,7 +26,8 @@ export class CraneComponent implements OnInit, OnDestroy  {
 
   ngOnInit() {
     this.vesselToCraneService.notifyObservable$.subscribe(data =>{
-      this.currentSimDate = data.dateStartSim; 
+      this.currentSimDate = new Date(data.dateStartSim); 
+      console.log('Crane: '+this.crane.idCrane+' date sim: '+dateToYMD(this.currentSimDate));
       this.SimChanged(data.startSim);
     });
     this.totalUnits = this.crane.unitPlannedList.length;
@@ -80,15 +81,9 @@ export class CraneComponent implements OnInit, OnDestroy  {
       console.log('Crane : ' +this.crane.idCrane + ' not simulating' );
       return;
     }
-    
-    //if (this.currentSimDate == null) {
-      //this.currentSimDate = this.vesselToCraneService.getMinDate();
-    //}
-    //else {
-      console.log('Crane current date: ' +this.currentSimDate );
-      this.currentSimDate = new Date(this.currentSimDate.getTime() + (1000 * this.inpSimSpeed.nativeElement.value));
-    //}
 
+    console.log('Crane current date: ' + dateToYMD(this.currentSimDate));
+    this.currentSimDate = new Date(this.currentSimDate.getTime() + (1000 * this.inpSimSpeed.nativeElement.value));
 
     for (let uPlanned of this.crane.unitPlannedList) {
       if (new Date(uPlanned.dateOfMoveSIM) < new Date(this.currentSimDate)) {

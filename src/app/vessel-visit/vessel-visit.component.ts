@@ -19,7 +19,7 @@ export class VesselVisitComponent implements OnInit {
 
   vesselVisit: VesselVisit = new VesselVisit();
   simStarted: boolean;
-  currentSimDate: Date;
+
 
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }

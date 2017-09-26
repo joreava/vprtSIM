@@ -8,6 +8,8 @@
   <button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
   <button type="button" class="btn btn-warning" (click)="OnClearVeselVissit()">Clear Vessel Visit</button>
   <h1 class="display-1">{{vesselVisit.vesselName}}</h1>
+  <h1 class="display-1">{{vesselVisit.getStartDate()}}</h1>
+  
       <h3 class="display-2">{{vesselVisit.idVisit}}</h3>
       <div class="container">
         <app-crane *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl" ></app-crane>
