@@ -1,15 +1,16 @@
 
 import { Crane } from './Crane';
-export class VesselVisit {
-    constructor() {
+import { IVesselVisit } from './IVesselVisit';
 
+
+export class VesselVisit{
+    constructor() {
+        
         this.craneList = new Array<Crane>();
         this.idVisit = '';
         this.vesselName = '';
     }
 
-
-    
     idVisit: string;
     vesselName: string;
     craneList: Crane[];
@@ -17,8 +18,7 @@ export class VesselVisit {
     endDate: Date;
 
     getStartDate(): Date { 
-
-        if (this.startDate === null) 
+        if (this.startDate == null) 
         {
             this.setDates();
         }
@@ -27,7 +27,7 @@ export class VesselVisit {
 
     getEndDate(): Date { 
    
-        if(this.endDate === null) 
+        if(this.endDate == null) 
         {
             this.setDates();
         }
@@ -37,12 +37,12 @@ export class VesselVisit {
     setDates()
     {
         let dateList: Date[] = new Array<Date>();
+        alert(this.craneList.length)
         this.craneList.forEach(cr => {
             cr.unitPlannedList.forEach(u => {
-                dateList.push(u.dateOfMove);
+                dateList.push(new Date(u.dateOfMove));
             });
         });
-        console.log('Total dates: ' + dateList.length)
         this.startDate = new Date(Math.min.apply(null, dateList));
         this.endDate = new Date(Math.max.apply(null, dateList));
     }

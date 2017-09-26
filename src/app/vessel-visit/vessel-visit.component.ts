@@ -31,12 +31,25 @@ export class VesselVisitComponent implements OnInit {
   getVesselVisitFromN4(): void {
     console.log('>> getVesselVisitFromN4');
     this.backEndService.getVeselVisitN4().subscribe(data => {
-      alert(data)
-      this.vesselVisit = data;
+
+      this.vesselVisit = this.fromJSON(data);
       console.log('<< data received, min date: '+ String(this.vesselVisit.getStartDate()));
      
     });
   }
+
+  fromJSON(json: VesselVisit): VesselVisit {
+    
+            var result = new VesselVisit();
+    
+            for (var key in json) {
+                if(result.hasOwnProperty(key)) {
+                    result[key] = json[key]
+                }
+            }
+    
+            return result;
+        }
 
   OnGetVesselVisit() {
     console.log('User>> GetVesselVisit')
