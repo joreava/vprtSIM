@@ -19,6 +19,7 @@ export class VesselVisitComponent implements OnInit {
 
   vesselVisit: VesselVisit = new VesselVisit();
   simStarted: boolean;
+  currentSimDate: Date;
 
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }
@@ -30,8 +31,10 @@ export class VesselVisitComponent implements OnInit {
   getVesselVisitFromN4(): void {
     console.log('>> getVesselVisitFromN4');
     this.backEndService.getVeselVisitN4().subscribe(data => {
+      alert(data)
       this.vesselVisit = data;
-      console.log('<< data received');
+      console.log('<< data received, min date: '+ String(this.vesselVisit.getStartDate()));
+     
     });
   }
 
@@ -41,13 +44,13 @@ export class VesselVisitComponent implements OnInit {
   }
 
   OnClearVeselVissit(): void {
-    this.OnStopSimulator();
     this.backEndService.clearVesselVisit().subscribe(data => 
       {
-        console.log('vessel visit cleared')
+        /*console.log('vessel visit cleared')
         for (const prop of Object.getOwnPropertyNames(this.vesselVisit)) {
-          delete this.vesselVisit[prop];
-        }
+          delete this.vesselVisit[prop];*/
+          //this.getVesselVisitFromN4();
+        //}
       });
   }
 
@@ -55,7 +58,7 @@ export class VesselVisitComponent implements OnInit {
     if (!this.simStarted) {
       this.backEndService.startSimulator().subscribe(data => console.log(data));
       this.simStarted = true;
-      this.vesselToCraneService.notifyOther(this.simStarted);
+      this.vesselToCraneService.notifyOther({ startSim: this.simStarted, dateStartSim: this.vesselVisit.getStartDate() });
     }
   }
   OnStopSimulator(): void {
@@ -89,4 +92,5 @@ export class VesselVisitComponent implements OnInit {
     );
 
   }
+
 }

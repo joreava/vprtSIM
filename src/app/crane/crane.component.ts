@@ -23,8 +23,12 @@ export class CraneComponent implements OnInit, OnDestroy  {
   @ViewChild('initDelay') inpInitDelay: ElementRef;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }
+
   ngOnInit() {
-    this.vesselToCraneService.notifyObservable$.subscribe(data => this.SimChanged(data));
+    this.vesselToCraneService.notifyObservable$.subscribe(data =>{
+      this.currentSimDate = data.dateStartSim; 
+      this.SimChanged(data.startSim);
+    });
     this.totalUnits = this.crane.unitPlannedList.length;
     this.sortByDate();
   }
@@ -71,12 +75,21 @@ export class CraneComponent implements OnInit, OnDestroy  {
   }
 
   Sim() {
-    if (this.currentSimDate == null && this.crane.unitPlannedList.length > 0) {
-      this.currentSimDate = new Date(this.crane.unitPlannedList[0].dateOfMove);
+    if(this.crane.unitPlannedList.length === 0)
+    {
+      console.log('Crane : ' +this.crane.idCrane + ' not simulating' );
+      return;
     }
-    else {
+    
+    //if (this.currentSimDate == null) {
+      //this.currentSimDate = this.vesselToCraneService.getMinDate();
+    //}
+    //else {
+      console.log('Crane current date: ' +this.currentSimDate );
       this.currentSimDate = new Date(this.currentSimDate.getTime() + (1000 * this.inpSimSpeed.nativeElement.value));
-    }
+    //}
+
+
     for (let uPlanned of this.crane.unitPlannedList) {
       if (new Date(uPlanned.dateOfMoveSIM) < new Date(this.currentSimDate)) {
         console.log('>>> Unit: ' + uPlanned.idUnit + 'sent! >>>');

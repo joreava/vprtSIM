@@ -4,7 +4,7 @@
   <button type="button" *ngIf="!this.simStarted"   [ngClass]="{disabled : simStarted}"  class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
   <button type="button" *ngIf="this.simStarted"  [ngClass]="{disabled : !simStarted}"class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
   <img style="float:left" src="./src/assets/images/container-ship.png" height="100px" alt="">  
-  <button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnGetVesselVisit()">Get vesselVisit</button>
+  ,<!--<button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnGetVesselVisit()">Get vesselVisit</button> -->
   <button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
   <button type="button" class="btn btn-warning" (click)="OnClearVeselVissit()">Clear Vessel Visit</button>
   <h1 class="display-1">{{vesselVisit.vesselName}}</h1>

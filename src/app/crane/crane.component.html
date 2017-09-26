@@ -1,9 +1,7 @@
 
 <div class="container" (startEvent)="startEvent($event)">
-
   <div class="row">
     <h3 class="display-2">Crane: {{crane.idCrane}}</h3>
-  
       <h5 *ngIf="currentSimDate"> Sim time: {{currentSimDate | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
 
    <!-- <button type="button" class="btn btn-success" (click)="OnStartSim()">Start Crane</button>
@@ -21,7 +19,6 @@
   
   <div class="row">
   <div class="col-sm-4" style="height: 500px; overflow: auto;">
-
     <h3 class="display-3">Planned units ({{crane.unitPlannedList.length}}/{{totalUnits}})</h3>
     <table class="table table-striped" >
       <thead>
@@ -59,6 +56,5 @@
     </table>
   </div>
 </div>
-
 </div>
 <hr>

@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class VesselToCraneService {
 
-    private notify = new Subject<boolean>();
+    private notify = new Subject<any>();
     /**
      * Observable string streams
      */
@@ -12,8 +12,9 @@ export class VesselToCraneService {
   
     constructor(){}
   
-    public notifyOther(data: boolean) {
+    public notifyOther(data: any) {
         this.notify.next(data);
     }
+
 
 }
