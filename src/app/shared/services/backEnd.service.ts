@@ -87,20 +87,6 @@ private wsService: WebSocketService;
     .map((res: Response) => { console.log(res); });
   }
 
-  connectToSocket()
-  {
-		this.vesselVisitSubject   = <Subject<VesselVisit>>this.wsService
-    .connect(CHAT_URL)
-    .map((response: MessageEvent): VesselVisit => {
-      let data = JSON.parse(response.data);
-      return {
-        vesselName : data.vesselName,
-        idVisit: data.idVisit,
-        craneList: data.craneList
-      }
-    });
-  }
-
  getXvelaVesselReadySim(): Observable<any>
  {
   

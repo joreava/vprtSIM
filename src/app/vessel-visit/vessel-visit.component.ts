@@ -5,7 +5,7 @@ import { Unit } from './../model/Unit';
 import { Crane } from './../model/Crane';
 import { VesselVisit } from './../model/VesselVisit';
 import { BackEndService } from './../shared/services/backEnd.service';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { parseString } from 'xml2js';
 
@@ -19,40 +19,44 @@ export class VesselVisitComponent implements OnInit {
 
   vesselVisit: VesselVisit = new VesselVisit();
   simStarted: boolean;
-
-
+  @ViewChild('intervalSpeed') inpSimSpeed: ElementRef;
+ dateSim: Date;
+  interval;
+  simSpeed: number;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
+
+    //this.dateSim = new Date(this.vesselVisit.getStartDate());
   }
 
   ngOnInit(): void {
+    this.simSpeed =  this.inpSimSpeed.nativeElement.value != '' ?
+    this.inpSimSpeed.nativeElement.value : 
+    this.inpSimSpeed.nativeElement.placeholder;
     this.getVesselVisitFromN4();
   }
+
+  ngOnDestroy(){
+  clearInterval(this.interval);
+}
 
   getVesselVisitFromN4(): void {
     console.log('>> getVesselVisitFromN4');
     this.backEndService.getVeselVisitN4().subscribe(data => {
-
-      this.vesselVisit = this.fromJSON(data);
-      console.log('<< data received, min date: '+ String(this.vesselVisit.getStartDate()));
-     
+      this.vesselVisit = this.VesselVisitoFromJSON(data);
     });
   }
 
-  fromJSON(json: VesselVisit): VesselVisit {
-    
+  VesselVisitoFromJSON(json: VesselVisit): VesselVisit {
             var result = new VesselVisit();
-    
             for (var key in json) {
                 if(result.hasOwnProperty(key)) {
                     result[key] = json[key]
                 }
             }
-    
             return result;
         }
-
   OnGetVesselVisit() {
-    console.log('User>> GetVesselVisit')
+    console.log('User>> GetVesselVisit');
     this.getVesselVisitFromN4();
   }
 
@@ -68,24 +72,48 @@ export class VesselVisitComponent implements OnInit {
   }
 
   OnStartSimulator(): void {
+
+
+
     if (!this.simStarted) {
       this.backEndService.startSimulator().subscribe(data => console.log(data));
       this.simStarted = true;
-      this.vesselToCraneService.notifyOther({ startSim: this.simStarted, dateStartSim: this.vesselVisit.getStartDate() });
+
+      this.interval = setInterval(() => {
+        this.Sim();
+      }, 1000 / this.simSpeed);
     }
   }
+
+Sim()
+{
+if(this.dateSim == null)
+{
+  this.dateSim = new Date(this.vesselVisit.getStartDate());
+}
+else
+{
+
+  this.dateSim = new Date(this.dateSim.getTime() + (1000 * this.simSpeed));
+}
+
+  this.vesselToCraneService.notifyOther({ 
+    startSim: this.simStarted, 
+    dateStartSim: this.dateSim});
+}
+
   OnStopSimulator(): void {
     if (this.simStarted) {
       this.backEndService.stopSimulator().subscribe(data => console.log(data));
       this.simStarted = false;
       this.vesselToCraneService.notifyOther(this.simStarted);
+      clearInterval(this.interval);
     }
   }
 
   craneSimStarted(status: boolean) {
     this.simStarted = status;
   }
-
 
   OnSimXvelaVesselReady(): void {
     let xmlstring;
@@ -103,7 +131,5 @@ export class VesselVisitComponent implements OnInit {
       });
     }
     );
-
   }
-
 }
