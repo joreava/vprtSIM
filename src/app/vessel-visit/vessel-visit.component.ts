@@ -8,12 +8,13 @@ import { BackEndService } from './../shared/services/backEnd.service';
 import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { parseString } from 'xml2js';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-vessel-visit',
   templateUrl: './vessel-visit.component.html',
   styleUrls: ['./vessel-visit.component.css'],
-  providers: [BackEndService, VesselToCraneService]
+  providers: [BackEndService, VesselToCraneService],
 })
 export class VesselVisitComponent implements OnInit {
 
@@ -23,16 +24,20 @@ export class VesselVisitComponent implements OnInit {
  dateSim: Date;
   interval;
   simSpeed: number;
+  busy: Subscription;
+  loading: boolean;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
 
-    //this.dateSim = new Date(this.vesselVisit.getStartDate());
+
   }
 
   ngOnInit(): void {
-    this.simSpeed =  this.inpSimSpeed.nativeElement.value != '' ?
+    this.simSpeed =  this.inpSimSpeed.nativeElement.value !== '' ?
     this.inpSimSpeed.nativeElement.value : 
     this.inpSimSpeed.nativeElement.placeholder;
     this.getVesselVisitFromN4();
+    
+  
   }
 
   ngOnDestroy(){
@@ -41,8 +46,11 @@ export class VesselVisitComponent implements OnInit {
 
   getVesselVisitFromN4(): void {
     console.log('>> getVesselVisitFromN4');
-    this.backEndService.getVeselVisitN4().subscribe(data => {
+    this.loading = true;
+    this.busy = this.backEndService.getVeselVisitN4().subscribe(data => {
       this.vesselVisit = this.VesselVisitoFromJSON(data);
+      this.loading = false;
+      this.dateSim = this.vesselVisit.getStartDate();
     });
   }
 
@@ -72,9 +80,6 @@ export class VesselVisitComponent implements OnInit {
   }
 
   OnStartSimulator(): void {
-
-
-
     if (!this.simStarted) {
       this.backEndService.startSimulator().subscribe(data => console.log(data));
       this.simStarted = true;
@@ -87,13 +92,11 @@ export class VesselVisitComponent implements OnInit {
 
 Sim()
 {
-if(this.dateSim == null)
+if (this.dateSim == null)
 {
   this.dateSim = new Date(this.vesselVisit.getStartDate());
 }
-else
-{
-
+else{
   this.dateSim = new Date(this.dateSim.getTime() + (1000 * this.simSpeed));
 }
 
@@ -117,16 +120,16 @@ else
 
   OnSimXvelaVesselReady(): void {
     let xmlstring;
-    this.backEndService.getXvelaVesselReadySim().subscribe(data => {
-
+    this.loading = true;
+    this.busy =this.backEndService.getXvelaVesselReadySim().subscribe(data => {
       xmlstring = data.text();
       console.log('xml loaded');
-      //console.log('sending-> '+xmlstring)
-      this.backEndService.sendXvelaFile(xmlstring).subscribe(res => {
+      this.busy =this.backEndService.sendXvelaFile(xmlstring).subscribe(res => {
         console.log('xml sent')
-        this.backEndService.getVeselVisitN4().subscribe(res => {
-          console.log('vessel visit got')
-          this.vesselVisit = res;
+        this.busy = this.backEndService.getVeselVisitN4().subscribe(res => {
+          console.log('vessel visit got');
+          this.vesselVisit = this.VesselVisitoFromJSON(res);
+          this.loading = false;
         })
       });
     }

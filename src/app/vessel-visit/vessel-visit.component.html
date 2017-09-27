@@ -1,45 +1,42 @@
-
-<div class="container" >
+<div class="container"  [ngBusy]="{busy: busy, message: 'Getting Visit...'}">
 <div class="jumbotron jumbotron-fluid">
-  <!--<div class="col-xs-2">
-      <label for="name" >Sim speed</label>
-      <input #intervalSpeed type="text" class="form-control input-lg" size="5" value="15">
-  </div> -->
-  
   <div class="col-xs-6">
-      <form class="form-inline">
-          <input  #intervalSpeed class="form-control mr-sm-2" type="text" placeholder="15">
-          <button type="button" *ngIf="!this.simStarted"   [ngClass]="{disabled : simStarted}"  class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
-          <button type="button" *ngIf="this.simStarted"  [ngClass]="{disabled : !simStarted}"class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
-        </form>
-      </div>
-
+    <form class="form-inline">
+      <input #intervalSpeed class="form-control mr-sm-2" type="text" placeholder="15">
+      <button type="button" *ngIf="!this.simStarted" [ngClass]="{disabled : simStarted}" class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
+      <button type="button" *ngIf="this.simStarted" [ngClass]="{disabled : !simStarted}" class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
+    </form>
+  </div>
   <div class="col-xs-6">
-      <div class="pull-right"> 
+    <div class="pull-right">
       <button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
-      <button type="button" class="btn btn-warning" (click)="OnClearVeselVissit()">Clear Vessel Visit</button>
+      <!-- <button type="button" class="btn btn-warning" (click)="OnClearVeselVissit()">Clear Vessel Visit</button> -->
+    </div>
+  </div>
+</div>
+<div class="container"  *ngIf="!loading"  [ngBusy]="{busy: busy, message: 'Getting Visit2...'}">
+  <div class="col-xl-2">
+    <img style="float:left" src="./src/assets/images/container-ship.png" height="120px" alt="">
+  </div>
+  <!--<button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnGetVesselVisit()">Get vesselVisit</button> -->
+  <div class="col-xl-6">
+    <h2 class="display-1">{{vesselVisit.vesselName}}</h2>
+    <h3 class="display-2">{{vesselVisit.idVisit}}</h3>
+  </div>
+  <div class="col-xl-6">
+    <div class="pull-right">
+      <h2 class="display-1">{{dateSim | date: 'dd/MM/yyyy HH:mm:ss'}}</h2>
     </div>
   </div>
 
-  
 
-  
+<div class="container">
+  <app-crane *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>
 </div>
-  
-  <img style="float:left" src="./src/assets/images/container-ship.png" height="100px" alt="">  
-  <!--<button type="button" ng-if="!vesselVisit" class="btn btn-primary" (click)="OnGetVesselVisit()">Get vesselVisit</button> -->
- 
-  <h1 class="display-1">{{vesselVisit.vesselName}}</h1>
-  <h1 class="display-1">{{dateSim | date: 'dd/MM/yyyy HH:mm:ss'}}</h1>
-  
-      <h3 class="display-2">{{vesselVisit.idVisit}}</h3>
-      <div class="container">
-        <app-crane *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl" ></app-crane>
-      </div>
 </div>
-
+</div>
 <ng-template #getVesselVisitButton>
   <div class="container">
-      <p>Loading</p>
+    <p>Loading</p>
   </div>
 </ng-template>
