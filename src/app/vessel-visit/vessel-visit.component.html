@@ -1,6 +1,5 @@
 <div class="container">
   <div class="jumbotron jumbotron-fluid">
-
     <div class="row">
       <div class="col-xs-8">
         <img style="float:left" src="./src/assets/images/container-ship.png" height="120px" alt="">
@@ -13,22 +12,22 @@
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <button type="button" ng-if="!vesselVisit" [ngClass]="{disabled : busyXVSim}" class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
+            <button type="button" ng-if="!vesselVisit" [ngClass]="{disabled : loading}" class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
           </div>
       <div class="col-xs-6">
         <form class="form-inline pull-right">
           <input #intervalSpeed class="form-control mr-sm-2" type="text" placeholder="15">
-          <button type="button" *ngIf="!this.simStarted" [ngClass]="{disabled : simStarted}" class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
-          <button type="button" *ngIf="this.simStarted" [ngClass]="{disabled : !simStarted}" class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
+          <button type="button" *ngIf="!this.simStarted" [ngClass]="{disabled : simStarted || loading}" class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
+          <button type="button" *ngIf="this.simStarted" [ngClass]="{disabled : !simStarted || loading}" class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
         </form>
       </div>
      
     </div>
   </div>
-      <app-crane *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>
+      <app-crane  *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>
 </div>
-<ng-template #getVesselVisitButton>
+<ng-template #showLoading>
   <div class="container">
-    <p>Loading</p>
+    <p>Gettin Vessel Visit</p>
   </div>
 </ng-template>

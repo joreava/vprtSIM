@@ -31,10 +31,8 @@ export class CraneComponent implements OnInit, OnDestroy {
         this.currentSimDate = new Date(data.dateStartSim);
         this.SimChanged(data.startSim);
       });
-    this.initDelaySeconds = this.inpInitDelay.nativeElement.value * 60 * 1000;
     this.totalUnits = this.crane.unitPlannedList.length;
     this.sortPlanedListByDateASC();
-    this.SetSimDate();
     this.currentSimDate = new Date()
   }
 
@@ -53,20 +51,21 @@ export class CraneComponent implements OnInit, OnDestroy {
   }
 
   OnStartSim() {
+    this.SetSimDate();
     this.Sim();
-    /*this.interval = setInterval(() => {
-      this.Sim();
-    }, 1000 / this.simSpeed);*/
   }
-
   OnStopSim() {
     console.log(this.crane.idCrane + ', stopping simulation');
     //clearInterval(this.interval);
     this.currentSimDate = null;
-    
   }
-
   SetSimDate(): void {
+
+    let delay = this.inpInitDelay.nativeElement.value !== '' ?
+    this.inpInitDelay.nativeElement.value :
+    this.inpInitDelay.nativeElement.placeholder;
+    this.initDelaySeconds = delay * 60 * 1000;
+
     let cont: number = 0;
     for (let uPlanned of this.crane.unitPlannedList) {
       uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));

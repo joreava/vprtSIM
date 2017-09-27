@@ -26,15 +26,14 @@ export class VesselVisitComponent implements OnInit {
   simSpeed: number;
   busy: Subscription;
   busyXVSim: Subscription;
-
+  loading: boolean;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
 
   }
 
   ngOnInit(): void {
-    this.simSpeed = this.inpSimSpeed.nativeElement.value !== '' ?
-      this.inpSimSpeed.nativeElement.value :
-      this.inpSimSpeed.nativeElement.placeholder;
+    this.loading = true;
+  
     this.getVesselVisitFromN4();
   }
 
@@ -46,6 +45,7 @@ export class VesselVisitComponent implements OnInit {
     this.backEndService.getVeselVisitN4().subscribe(data => {
       this.vesselVisit = this.VesselVisitoFromJSON(data);
       this.dateSim = this.vesselVisit.getStartDate();
+      this.loading = false;
     });
   }
 
@@ -59,10 +59,13 @@ export class VesselVisitComponent implements OnInit {
     return result;
   }
   OnStartSimulator(): void {
-    if (!this.simStarted) {
+    if (!this.loading) {
+      this.simSpeed = this.inpSimSpeed.nativeElement.value !== '' ?
+      this.inpSimSpeed.nativeElement.value :
+      this.inpSimSpeed.nativeElement.placeholder;
+
       this.backEndService.startSimulator().subscribe(data => console.log(data));
       this.simStarted = true;
-
       this.interval = setInterval(() => {
         this.Sim();
       }, 1000 / this.simSpeed);
@@ -77,8 +80,9 @@ export class VesselVisitComponent implements OnInit {
     }
     this.vesselToCraneService.notifyOther({
       startSim: this.simStarted,
-      dateStartSim: this.dateSim
+      dateStartSim: this.dateSim,
     });
+    this.anyRemainingUnit();
   }
 
   OnStopSimulator(): void {
@@ -97,17 +101,37 @@ export class VesselVisitComponent implements OnInit {
     this.simStarted = status;
   }
 
+anyRemainingUnit()
+{
+  let acum = 0;
+  this.vesselVisit.craneList.forEach(cr=>
+  {
+    acum = acum + cr.unitPlannedList.length;
+  })
+
+  if(acum === 0)
+  {
+    console.log('Simulation finished!');
+    this.OnStopSimulator();
+  }
+}
+
   OnSimXvelaVesselReady(): void {
-    console.log('OnSimXvelaVesselReady STARTED');
-    this.stopSim();
-    this.busyXVSim=Observable.forkJoin(
-      this.backEndService.stopSimulator(),
-      this.backEndService.getXvelaVesselReadySim()
-    ).subscribe(res => {
-      this.vesselVisit = this.VesselVisitoFromJSON(res[1]);
-      this.dateSim = this.vesselVisit.getStartDate();
-      console.log('OnSimXvelaVesselReady FINISHED');
-      console.log(res[1]);
-    });
+    if (!this.loading) {
+      this.loading = true;
+      console.log('OnSimXvelaVesselReady STARTED');
+      //this.vesselVisit = null;
+      this.stopSim();
+      this.busyXVSim = Observable.forkJoin(
+        this.backEndService.stopSimulator(),
+        this.backEndService.getXvelaVesselReadySim()
+      ).subscribe(res => {
+        this.vesselVisit = this.VesselVisitoFromJSON(res[1]);
+        this.dateSim = this.vesselVisit.getStartDate();
+        console.log('OnSimXvelaVesselReady FINISHED');
+        console.log(res[1]);
+        this.loading = false;
+      });
+    }
   }
 }
