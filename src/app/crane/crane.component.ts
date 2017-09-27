@@ -72,7 +72,6 @@ export class CraneComponent implements OnInit, OnDestroy {
       uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
       cont++;
     }
-    console.log(cont + 'dateSIM updated!');
   }
 
   Sim() {
@@ -100,13 +99,11 @@ export class CraneComponent implements OnInit, OnDestroy {
   }
 
   public sortPlanedListByDateASC(): void {
-    console.log('sorting unitPlanned');
     this.crane.unitPlannedList.sort((a: Unit, b: Unit) => {
       return this.getTime(new Date(a.dateOfMove)) - this.getTime(new Date(b.dateOfMove));
     });
   }
   public sortExecutedListByDateDESC(): void {
-    console.log('sorting unitExecuted');
     this.crane.unitExecutedList.sort((a: Unit, b: Unit) => {
       return this.getTime(new Date(b.dateOfMove)) - this.getTime(new Date(a.dateOfMove));
     });

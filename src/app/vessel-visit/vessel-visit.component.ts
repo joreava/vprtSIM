@@ -21,64 +21,44 @@ export class VesselVisitComponent implements OnInit {
   vesselVisit: VesselVisit = new VesselVisit();
   simStarted: boolean;
   @ViewChild('intervalSpeed') inpSimSpeed: ElementRef;
- dateSim: Date;
+  dateSim: Date;
   interval;
   simSpeed: number;
   busy: Subscription;
-  loading: boolean;
-  constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
+  busyXVSim: Subscription;
 
+  constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
 
   }
 
   ngOnInit(): void {
-    this.simSpeed =  this.inpSimSpeed.nativeElement.value !== '' ?
-    this.inpSimSpeed.nativeElement.value : 
-    this.inpSimSpeed.nativeElement.placeholder;
+    this.simSpeed = this.inpSimSpeed.nativeElement.value !== '' ?
+      this.inpSimSpeed.nativeElement.value :
+      this.inpSimSpeed.nativeElement.placeholder;
     this.getVesselVisitFromN4();
-    
-  
   }
 
-  ngOnDestroy(){
-  clearInterval(this.interval);
-}
+  ngOnDestroy() {
+    clearInterval(this.interval);
+  }
 
   getVesselVisitFromN4(): void {
-    console.log('>> getVesselVisitFromN4');
-    this.loading = true;
-    this.busy = this.backEndService.getVeselVisitN4().subscribe(data => {
+    console.log('CHEMAAA');
+    this.backEndService.getVeselVisitN4().subscribe(data => {
       this.vesselVisit = this.VesselVisitoFromJSON(data);
-      this.loading = false;
       this.dateSim = this.vesselVisit.getStartDate();
     });
   }
 
   VesselVisitoFromJSON(json: VesselVisit): VesselVisit {
-            var result = new VesselVisit();
-            for (var key in json) {
-                if(result.hasOwnProperty(key)) {
-                    result[key] = json[key]
-                }
-            }
-            return result;
-        }
-  OnGetVesselVisit() {
-    console.log('User>> GetVesselVisit');
-    this.getVesselVisitFromN4();
+    var result = new VesselVisit();
+    for (var key in json) {
+      if (result.hasOwnProperty(key)) {
+        result[key] = json[key]
+      }
+    }
+    return result;
   }
-
-  OnClearVeselVissit(): void {
-    this.backEndService.clearVesselVisit().subscribe(data => 
-      {
-        /*console.log('vessel visit cleared')
-        for (const prop of Object.getOwnPropertyNames(this.vesselVisit)) {
-          delete this.vesselVisit[prop];*/
-          //this.getVesselVisitFromN4();
-        //}
-      });
-  }
-
   OnStartSimulator(): void {
     if (!this.simStarted) {
       this.backEndService.startSimulator().subscribe(data => console.log(data));
@@ -90,20 +70,17 @@ export class VesselVisitComponent implements OnInit {
     }
   }
 
-Sim()
-{
-if (this.dateSim == null)
-{
-  this.dateSim = new Date(this.vesselVisit.getStartDate());
-}
-else{
-  this.dateSim = new Date(this.dateSim.getTime() + (1000 * this.simSpeed));
-}
-
-  this.vesselToCraneService.notifyOther({ 
-    startSim: this.simStarted, 
-    dateStartSim: this.dateSim});
-}
+  Sim() {
+    if (this.dateSim == null) {
+      this.dateSim = new Date(this.vesselVisit.getStartDate());
+    } else {
+      this.dateSim = new Date(this.dateSim.getTime() + (1000 * this.simSpeed));
+    }
+    this.vesselToCraneService.notifyOther({
+      startSim: this.simStarted,
+      dateStartSim: this.dateSim
+    });
+  }
 
   OnStopSimulator(): void {
     if (this.simStarted) {
@@ -119,20 +96,13 @@ else{
   }
 
   OnSimXvelaVesselReady(): void {
-    let xmlstring;
-    this.loading = true;
-    this.busy =this.backEndService.getXvelaVesselReadySim().subscribe(data => {
-      xmlstring = data.text();
-      console.log('xml loaded');
-      this.busy =this.backEndService.sendXvelaFile(xmlstring).subscribe(res => {
-        console.log('xml sent')
-        this.busy = this.backEndService.getVeselVisitN4().subscribe(res => {
-          console.log('vessel visit got');
-          this.vesselVisit = this.VesselVisitoFromJSON(res);
-          this.loading = false;
-        })
-      });
-    }
-    );
+    console.log('OnSimXvelaVesselReady STARTED');
+    this.busy = this.backEndService.getXvelaVesselReadySim().subscribe(data => {
+      this.vesselVisit = this.VesselVisitoFromJSON(data);
+      this.dateSim = this.vesselVisit.getStartDate();
+      console.log('OnSimXvelaVesselReady FINISHED');
+      console.log(data);
+    });
   }
+
 }
