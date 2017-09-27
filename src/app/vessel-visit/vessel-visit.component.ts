@@ -43,7 +43,6 @@ export class VesselVisitComponent implements OnInit {
   }
 
   getVesselVisitFromN4(): void {
-    console.log('CHEMAAA');
     this.backEndService.getVeselVisitN4().subscribe(data => {
       this.vesselVisit = this.VesselVisitoFromJSON(data);
       this.dateSim = this.vesselVisit.getStartDate();
@@ -85,24 +84,33 @@ export class VesselVisitComponent implements OnInit {
   OnStopSimulator(): void {
     if (this.simStarted) {
       this.backEndService.stopSimulator().subscribe(data => console.log(data));
-      this.simStarted = false;
-      this.vesselToCraneService.notifyOther(this.simStarted);
-      clearInterval(this.interval);
+      this.stopSim();
     }
   }
 
+  stopSim()
+  {
+    this.simStarted = false;
+    this.vesselToCraneService.notifyOther(this.simStarted);
+    console.log('-----------> STOPPED!')
+    clearInterval(this.interval);
+  }
   craneSimStarted(status: boolean) {
     this.simStarted = status;
   }
 
   OnSimXvelaVesselReady(): void {
     console.log('OnSimXvelaVesselReady STARTED');
-    this.busy = this.backEndService.getXvelaVesselReadySim().subscribe(data => {
-      this.vesselVisit = this.VesselVisitoFromJSON(data);
-      this.dateSim = this.vesselVisit.getStartDate();
-      console.log('OnSimXvelaVesselReady FINISHED');
-      console.log(data);
-    });
+    this.stopSim();
+Observable.forkJoin(
+  this.backEndService.stopSimulator(),
+  this.backEndService.getXvelaVesselReadySim()
+  ).subscribe(res=>{
+  this.vesselVisit = this.VesselVisitoFromJSON(res[1]);
+  this.dateSim = this.vesselVisit.getStartDate();
+  console.log('OnSimXvelaVesselReady FINISHED');
+  console.log(res[1]);
+  
+} );
   }
-
 }
