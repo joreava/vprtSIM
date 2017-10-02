@@ -119,7 +119,7 @@ anyRemainingUnit()
   OnSimXvelaVesselReady(): void {
     if (!this.loading) {
       this.loading = true;
-      console.log('OnSimXvelaVesselReady STARTED');
+      console.log('OnSimXvelaVesselReady STARTED!');
       //this.vesselVisit = null;
       this.stopSim();
       this.busyXVSim = Observable.forkJoin(
