@@ -7,4 +7,5 @@ export class CraneBreak {
     public idCrane: string
     public startDate: Date;
     public endDate: Date;
+    public type: number;
 }

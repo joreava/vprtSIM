@@ -7,13 +7,13 @@ import { Crane } from '../model/Crane';
 import { Subscription } from 'rxjs';
 import { CraneBreak } from 'app/model/CraneBreak';
 
+
 @Component({
   selector: 'app-crane',
   templateUrl: './crane.component.html',
   styleUrls: ['./crane.component.css']
 })
 export class CraneComponent implements OnInit, OnDestroy {
-
   @Input() startCrane: boolean;
   @Input() crane: Crane;
   currentSimDate: Date;
@@ -21,7 +21,8 @@ export class CraneComponent implements OnInit, OnDestroy {
   initDelaySeconds: number;
   private subscription: Subscription;
   @ViewChild('initDelay') inpInitDelay: ElementRef;
-
+  @ViewChild('cbStartTime') inpcbStartTime: ElementRef;
+  @ViewChild('cbMinutes') inpcbMinutes: ElementRef;
   craneBreakList: CraneBreak[] = [];
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }
@@ -38,7 +39,6 @@ export class CraneComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    //clearInterval(this.interval);
     if (this.subscription != null) {
       this.subscription.unsubscribe();
     }
@@ -46,9 +46,7 @@ export class CraneComponent implements OnInit, OnDestroy {
 
   SimChanged(start: boolean) {
     if (start) { this.OnStartSim(); }
-    else {
-      this.OnStopSim();
-    }
+    else { this.OnStopSim(); }
   }
 
   OnStartSim() {
@@ -57,150 +55,127 @@ export class CraneComponent implements OnInit, OnDestroy {
   }
   OnStopSim() {
     console.log(this.crane.idCrane + ', stopping simulation');
-    //clearInterval(this.interval);
     this.currentSimDate = null;
   }
   SetSimDate_original(): void {
-  
+
     let delay = this.inpInitDelay.nativeElement.value !== '' ?
-    this.inpInitDelay.nativeElement.value :
-    this.inpInitDelay.nativeElement.placeholder;
+      this.inpInitDelay.nativeElement.value :
+      this.inpInitDelay.nativeElement.placeholder;
     this.initDelaySeconds = delay * 60 * 1000;
 
     let cont: number = 0;
     for (let uPlanned of this.crane.unitPlannedList) {
       // only if dateOfMove is null
-      if(!uPlanned.dateOfMoveSIM)
-      {
+      if (!uPlanned.dateOfMoveSIM) {
         uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
       }
     }
   }
 
-  SetSimDate(): void{
+  SetSimDate(): void {
+    if (this.crane.unitPlannedList.some(u => !u.dateOfMoveSIM)) {
+      let delay = this.inpInitDelay.nativeElement.value !== '' ?
+        this.inpInitDelay.nativeElement.value :
+        this.inpInitDelay.nativeElement.placeholder;
+      this.initDelaySeconds = delay * 60 * 1000;
 
-
-if(this.crane.unitPlannedList.some(u=> !u.dateOfMoveSIM))
-{
-    let delay = this.inpInitDelay.nativeElement.value !== '' ?
-    this.inpInitDelay.nativeElement.value :
-    this.inpInitDelay.nativeElement.placeholder;
-    this.initDelaySeconds = delay * 60 * 1000;
-
-    let cont: number = 0;
-    for (let uPlanned of this.crane.unitPlannedList) {
-      // only if dateOfMove is null
-      /*let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMove)
-      if(durationCB > 0)
-      {
-        uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds) + durationCB);
-        console.log('??????????????????Unit '+uPlanned.idUnit+ 'inside a craneBreak('+durationCB+' secs). DateSim: '+uPlanned.dateOfMoveSIM);
-      }
-      else
-      {
+      const cont: number = 0;
+      for (let uPlanned of this.crane.unitPlannedList) {
         uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
-      }*/
-      uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
-    }
-    console.log('SET DATE SIM DONE'); 
-    this.SetCraneBreaks()
-    for (let uPlanned of this.crane.unitPlannedList) {
-      // only if dateOfMove is null
-      let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM)
-      if(durationCB > 0)
-      {
-        let previous = new Date (uPlanned.dateOfMoveSIM);
-       // uPlanned.dateOfMove = new Date(new Date(uPlanned.dateOfMove).getTime()  + durationCB);
-        uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime()  + durationCB);
-        let newprevious = new Date (uPlanned.dateOfMoveSIM);
-        console.log('Duration '+durationCB+' Unit '+uPlanned.idUnit+'dateSim Update; '+dateToYMD(previous)+ ' -> '+dateToYMD(newprevious));
       }
-     
+      console.log('SET DATE SIM DONE');
+      this.SetCraneBreaks()
+      this.SetCraneBreaksUser()
+      console.log('+++++ Crane Break Size +++++' + this.craneBreakList.length);
+      for (let uPlanned of this.crane.unitPlannedList) {
+        // only if dateOfMove is null
+        let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM);
+        if (durationCB > 0) {
+          let previous = new Date(uPlanned.dateOfMoveSIM);
+          uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime() + durationCB);
+          let newprevious = new Date(uPlanned.dateOfMoveSIM);
+          console.log('Duration ' + durationCB +
+            ' Unit ' + uPlanned.idUnit +
+            'dateSim Update; ' + dateToYMD(previous) +
+            ' -> ' + dateToYMD(newprevious));
+        }
+
+      }
+      console.log('SET CRANE BREAKS DONE');
     }
-    console.log('SET CRANE BREAKS DONE'); 
-  }
   }
 
-  SetCraneBreaks()
-  {
-if(this.craneBreakList.length >0) return;
+  SetCraneBreaks() {
+    if (this.craneBreakList.length > 0) { return; }
 
-    this.crane.unitPlannedList.forEach((uPlanned, index) =>
-    {
-  
-      //uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
-      if (index < this.crane.unitPlannedList.length - 1)
-      {
-     
-        let diffSecs = (new Date(this.crane.unitPlannedList[index + 1].dateOfMove).getTime() -
-                        new Date(this.crane.unitPlannedList[index].dateOfMove).getTime()) 
-                    / 1000;
-  
+    this.crane.unitPlannedList.forEach((uPlanned, index) => {
+      if (index < this.crane.unitPlannedList.length - 1) {
+        let diffSecs: number = (new Date(this.crane.unitPlannedList[index + 1].dateOfMove).getTime() -
+          new Date(this.crane.unitPlannedList[index].dateOfMove).getTime())
+          / 1000;
 
-        if (diffSecs >1800)
-        {
-          let cbreak : CraneBreak = new CraneBreak(); 
-          cbreak.startDate =  new Date(this.crane.unitPlannedList[index].dateOfMove);
-          cbreak.endDate =  new Date(this.crane.unitPlannedList[index + 1].dateOfMove);
+        if (diffSecs > 1800) {
+          let cbreak: CraneBreak = new CraneBreak();
+          cbreak.startDate = new Date(this.crane.unitPlannedList[index].dateOfMove);
+          cbreak.endDate = new Date(this.crane.unitPlannedList[index + 1].dateOfMove);
+          // Planned Crane Breaks
+          cbreak.type = 1;
           this.craneBreakList.push(cbreak);
           console.log('Crane ' + this.crane +
-           'Crane break between '+ dateToYMD(cbreak.startDate) + 
-           ' and ' + dateToYMD(cbreak.endDate));
+            'Crane break between ' + dateToYMD(cbreak.startDate) +
+            ' and ' + dateToYMD(cbreak.endDate));
         }
       }
     });
-    console.log('+++++ Crane Break Size +++++'+this.craneBreakList.length);
   }
 
-  IsInsideCraneBreak(date: Date) : number
-  {
-    
+  SetCraneBreaksUser() {
+    let craneBreakMinutes = this.inpcbMinutes.nativeElement.value !== '' ?
+      this.inpcbMinutes.nativeElement.value :
+      this.inpcbMinutes.nativeElement.placeholder;
+    craneBreakMinutes = craneBreakMinutes * 60 * 1000;
 
-    //console.log('DateToCOmapre'+dateToYMD(new Date(date)))
-    let cbo = this.craneBreakList.find(cb=> 
-      (new Date(date).getTime() > new Date(cb.startDate).getTime() )
+    let cBreak: CraneBreak = new CraneBreak();
+    cBreak.startDate = new Date('August 30, 2017 17:00:00');
+    cBreak.endDate = new Date(cBreak.startDate.getTime() + craneBreakMinutes);
+    cBreak.type = 2;
+    this.craneBreakList.push(cBreak);
+    console.log('CraneBreak added by user: ' + dateToYMD(cBreak.startDate) + '-> ' + dateToYMD(cBreak.endDate));
+  }
+
+  IsInsideCraneBreak(date: Date): number {
+    let cbo = this.craneBreakList.find(cb =>
+      (new Date(date).getTime() > new Date(cb.startDate).getTime())
       &&
-       (new Date(date).getTime() < new Date(cb.endDate).getTime()));
-
-
-
-  if (!cbo) return 0;
-      let duration = ( new Date(cbo.endDate).getTime() -  new Date(cbo.startDate).getTime());
-    //console.log('-->' +duration)
-      return duration;
+      (new Date(date).getTime() < new Date(cb.endDate).getTime()));
+    if (!cbo) {
+      return 0;
+    }
+    let duration = (new Date(cbo.endDate).getTime() - new Date(cbo.startDate).getTime());
+    return duration;
 
   }
-
   Sim() {
 
     this.sortPlanedListByDateASC();
 
     if (this.crane.unitPlannedList.length > 0) {
       for (let uPlanned of this.crane.unitPlannedList) {
-        if (new Date(uPlanned.dateOfMoveSIM) < new Date(this.currentSimDate)) {
+        if (new Date (uPlanned.dateOfMoveSIM) < new Date(this.currentSimDate)) {
           console.log('>>> Unit: ' + uPlanned.idUnit + 'sent! >>>');
           console.log('Unit date: ' + dateToYMD(new Date(uPlanned.dateOfMove)));
           console.log('Unit dateOfMove: ' + dateToYMD(new Date(uPlanned.dateOfMoveSIM)));
           console.log('Current date: ' + dateToYMD(new Date(this.currentSimDate)));
-          
+
           this.crane.unitExecutedList.push(uPlanned);
           this.crane.unitPlannedList.splice(this.crane.unitPlannedList.indexOf(uPlanned), 1);
-          
           this.sendUnit(uPlanned.idUnit, uPlanned.dateOfMoveSIM).subscribe(data => console.log(data));
-          
-          console.log('Removing from planned list: ' + uPlanned.idUnit+ '('+this.crane.unitPlannedList.indexOf(uPlanned)+')');
+          console.log('Removing from planned list: ' + uPlanned.idUnit + '(' + this.crane.unitPlannedList.indexOf(uPlanned) + ')');
           this.sortExecutedListByDateDESC();
-        
-
-          if(this.crane.idCrane === 'SQC56')
-          {
-          console.log('ExecutedList: (' + this.crane.idCrane + '), ' + this.crane.unitExecutedList.length);
-          console.log('PlannedList: (' + this.crane.idCrane + '), ' + this.crane.unitPlannedList.length);
-          }
         }
       }
     }
-   
   }
 
   sendUnit(unitId: string, dateOfMoveSIM: Date) {
@@ -221,7 +196,6 @@ if(this.craneBreakList.length >0) return;
       return this.getTime(new Date(b.dateOfMove)) - this.getTime(new Date(a.dateOfMove));
     });
   }
-
 }
 
 function randomSeconds() {
