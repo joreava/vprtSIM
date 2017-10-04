@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {BusyModule} from 'angular2-busy';
 import { AppComponent } from './app.component';
 import { CraneComponent } from './crane/crane.component';
 import { VesselVisitComponent } from './vessel-visit/vessel-visit.component';
@@ -20,8 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,  
     HttpModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    BusyModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

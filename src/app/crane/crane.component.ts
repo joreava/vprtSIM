@@ -7,7 +7,6 @@ import { Crane } from '../model/Crane';
 import { Subscription } from 'rxjs';
 import { CraneBreak } from 'app/model/CraneBreak';
 
-
 @Component({
   selector: 'app-crane',
   templateUrl: './crane.component.html',
@@ -24,6 +23,7 @@ export class CraneComponent implements OnInit, OnDestroy {
   @ViewChild('cbStartTime') inpcbStartTime: ElementRef;
   @ViewChild('cbMinutes') inpcbMinutes: ElementRef;
   craneBreakList: CraneBreak[] = [];
+  isAddCBChecked: boolean;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }
 
@@ -36,6 +36,7 @@ export class CraneComponent implements OnInit, OnDestroy {
     this.totalUnits = this.crane.unitPlannedList.length;
     this.sortPlanedListByDateASC();
     this.currentSimDate = new Date();
+    this.isAddCBChecked = false;
   }
 
   ngOnDestroy() {
@@ -80,14 +81,22 @@ export class CraneComponent implements OnInit, OnDestroy {
         this.inpInitDelay.nativeElement.placeholder;
       this.initDelaySeconds = delay * 60 * 1000;
 
-      const cont: number = 0;
       for (let uPlanned of this.crane.unitPlannedList) {
         uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
       }
-      console.log('SET DATE SIM DONE');
-      this.SetCraneBreaks()
-      this.SetCraneBreaksUser()
-      console.log('+++++ Crane Break Size +++++' + this.craneBreakList.length);
+      this.SetCraneBreaks();
+      this.SetCraneBreaksUser();
+      console.log('CraneBreakList: '+ this.craneBreakList.length);
+      this.craneBreakList.forEach(cb =>
+        {
+          let startCb = new Date(cb.startDate);
+          let endCb = new Date(cb.endDate);
+
+          console.log(this.crane.idCrane + ' CB: T: ' + cb.type +
+          ' S: '+ dateToYMD(startCb) +
+          ' E: '+ dateToYMD(cb.endDate));
+          
+        })
       for (let uPlanned of this.crane.unitPlannedList) {
         // only if dateOfMove is null
         let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM);
@@ -95,14 +104,13 @@ export class CraneComponent implements OnInit, OnDestroy {
           let previous = new Date(uPlanned.dateOfMoveSIM);
           uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime() + durationCB);
           let newprevious = new Date(uPlanned.dateOfMoveSIM);
-          console.log('Duration ' + durationCB +
+          /*console.log('Duration ' + durationCB +
             ' Unit ' + uPlanned.idUnit +
             'dateSim Update; ' + dateToYMD(previous) +
-            ' -> ' + dateToYMD(newprevious));
+            ' -> ' + dateToYMD(newprevious));*/
         }
 
       }
-      console.log('SET CRANE BREAKS DONE');
     }
   }
 
@@ -120,28 +128,46 @@ export class CraneComponent implements OnInit, OnDestroy {
           cbreak.startDate = new Date(this.crane.unitPlannedList[index].dateOfMove);
           cbreak.endDate = new Date(this.crane.unitPlannedList[index + 1].dateOfMove);
           // Planned Crane Breaks
-          cbreak.type = 1;
+          cbreak.type = 'P';
           this.craneBreakList.push(cbreak);
-          console.log('Crane ' + this.crane +
-            'Crane break between ' + dateToYMD(cbreak.startDate) +
-            ' and ' + dateToYMD(cbreak.endDate));
+          
         }
       }
     });
   }
 
   SetCraneBreaksUser() {
+
+  if(!this.isAddCBChecked){
+    return;
+  }
+
     let craneBreakMinutes = this.inpcbMinutes.nativeElement.value !== '' ?
       this.inpcbMinutes.nativeElement.value :
       this.inpcbMinutes.nativeElement.placeholder;
     craneBreakMinutes = craneBreakMinutes * 60 * 1000;
 
+    let time: string = this.inpcbStartTime.nativeElement.value !== '' ?
+    this.inpcbStartTime.nativeElement.value :
+    this.inpcbStartTime.nativeElement.placeholder;
+
     let cBreak: CraneBreak = new CraneBreak();
-    cBreak.startDate = new Date('August 30, 2017 17:00:00');
+
+    const year = this.currentSimDate.getFullYear();
+    const month = this.currentSimDate.getMonth();
+    const day = this.currentSimDate.getDate();
+
+    const timeSplited = time.split(':');
+  
+    let hours = timeSplited[0]; 
+    let minutes = timeSplited[1]; 
+
+    cBreak.startDate = new Date(year, month, day, +hours , +minutes, 0, 0);
+   
     cBreak.endDate = new Date(cBreak.startDate.getTime() + craneBreakMinutes);
-    cBreak.type = 2;
+    cBreak.type = 'U';
     this.craneBreakList.push(cBreak);
-    console.log('CraneBreak added by user: ' + dateToYMD(cBreak.startDate) + '-> ' + dateToYMD(cBreak.endDate));
+    console.log('-----------------CraneBreak added by user: ' + dateToYMD(cBreak.startDate) + '-> ' + dateToYMD(cBreak.endDate));
   }
 
   IsInsideCraneBreak(date: Date): number {
@@ -153,6 +179,7 @@ export class CraneComponent implements OnInit, OnDestroy {
       return 0;
     }
     let duration = (new Date(cbo.endDate).getTime() - new Date(cbo.startDate).getTime());
+    console.log(dateToYMD(new Date(date)) + 'inside CB ('+ cbo.type +')');
     return duration;
 
   }
@@ -210,7 +237,7 @@ function dateToYMD(date: Date) {
   let H = date.getHours();
   let min = date.getMinutes();
   let secs = date.getSeconds();
-  return '' + y + '-' + (m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + 'T' + H + ':' + min + ':' + secs;
+  return '' + y + '-' + (m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + 'T' + H + ':' + (min <= 9 ? '0' + min : min)  + ':' + (secs <= 9 ? '0' + secs : secs);
 }
 
 

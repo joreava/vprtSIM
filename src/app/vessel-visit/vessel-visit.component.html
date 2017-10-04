@@ -16,12 +16,11 @@
           </div>
       <div class="col-xs-6">
         <form class="form-inline pull-right">
-          <input #intervalSpeed class="form-control mr-sm-2" type="text" placeholder="15">
+          <input #intervalSpeed class="form-control mr-xs-2" type="text" placeholder="15">
           <button type="button" *ngIf="!this.simStarted" [ngClass]="{disabled : simStarted || loading}" class="btn btn-success" (click)="OnStartSimulator()">Start Simulator</button>
           <button type="button" *ngIf="this.simStarted" [ngClass]="{disabled : !simStarted || loading}" class="btn btn-danger" (click)="OnStopSimulator()">Stop Simulator</button>
         </form>
       </div>
-     
     </div>
   </div>
       <app-crane  *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>

@@ -1,21 +1,40 @@
 <div class="row">
   <div class="col-md-6">
-    <h3 class="display-2"  >Crane: {{crane.idCrane}}</h3>
+    <h3 class="display-2">Crane: {{crane.idCrane}}</h3>
     <h5 *ngIf="currentSimDate"> Sim time: {{currentSimDate | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
+  </div>
+
+  <div class="col-md-6">
+      <div class="form-check pull-right">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" [checked]="isAddCBChecked" (change)="isAddCBChecked = !isAddCBChecked">
+            Add Crane Break
+          </label>
+        </div>
+  </div>
+
+  <div class="col-md-12">
+      <div class="col-md-6">
+      <p *ngFor="let cBreak of craneBreakList">
+        ({{cBreak.type}}) {{cBreak.startDate | date: 'HH:mm'}} - {{cBreak.endDate | date: 'HH:mm'}}
+      </p>
   </div>
   <div class="col-md-6">
     <div class="form-group pull-right">
-      <label for="name">Init delay (min)</label>
-      <input #initDelay type="text" class="form-control"  [ngClass]="{disabled : simStarted}" placeholder="15">
-
-      <label for="name">CraneBreak StartTime</label>
-      <input #cbStartTime type="text" class="form-control"  [ngClass]="{disabled : simStarted}" placeholder="15">
-
-      <label for="name">CraneBreak (min)</label>
-      <input #cbMinutes type="text" class="form-control"  [ngClass]="{disabled : simStarted}" placeholder="15">
-  
-     
+      <div class="col-md-4">
+        <label for="name">Init delay (min)</label>
+        <input #initDelay type="text" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="15">
+      </div>
+      <div class="col-sm-4" >
+        <label for="name">CraneBreak StartTime</label>
+        <input #cbStartTime type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="17:00">
+      </div>
+      <div class="col-sm-4" >
+        <label for="name">CraneBreak (min)</label>
+        <input #cbMinutes type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="45">
+      </div>
     </div>
+  </div>
   </div>
 </div>
 <div class="row">
