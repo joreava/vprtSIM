@@ -138,7 +138,7 @@ export class CraneComponent implements OnInit, OnDestroy {
 
   SetCraneBreaksUser() {
 
-  if(!this.isAddCBChecked){
+  if (!this.isAddCBChecked) {
     return;
   }
 
@@ -226,7 +226,13 @@ export class CraneComponent implements OnInit, OnDestroy {
 }
 
 function randomSeconds() {
-  return 1000 * (Math.floor(Math.random() * 800));
+  //return 1000 * (Math.floor(Math.random() * 1000));
+  let min = -1000;
+  let max = 60;
+  
+  let rand= Math.floor(Math.random() * (max - min)) + min;
+
+  return 1000*rand;
 }
 
 function dateToYMD(date: Date) {
