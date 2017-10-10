@@ -6,6 +6,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter, 
 import { Crane } from '../model/Crane';
 import { Subscription } from 'rxjs';
 import { CraneBreak } from 'app/model/CraneBreak';
+import {MatSliderModule} from '@angular/material';
 
 @Component({
   selector: 'app-crane',
@@ -226,13 +227,10 @@ export class CraneComponent implements OnInit, OnDestroy {
 }
 
 function randomSeconds() {
-  //return 1000 * (Math.floor(Math.random() * 1000));
-  let min = -1000;
-  let max = 60;
-  
-  let rand= Math.floor(Math.random() * (max - min)) + min;
-
-  return 1000*rand;
+  const min = -1000;
+  const max = 60;
+  const rand = Math.floor(Math.random() * (max - min)) + min;
+  return 1000 * rand;
 }
 
 function dateToYMD(date: Date) {
