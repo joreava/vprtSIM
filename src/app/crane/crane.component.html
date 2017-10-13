@@ -5,41 +5,72 @@
   </div>
 
   <div class="col-md-6">
-      <div class="form-check pull-right">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" [checked]="isAddCBChecked" (change)="isAddCBChecked = !isAddCBChecked">
-            Add Crane Break
-          </label>
-        </div>
+    <div class="form-check pull-right">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [checked]="isAddCBChecked" (change)="isAddCBChecked = !isAddCBChecked"> Add Crane Break
+      </label>
+    </div>
   </div>
 
   <div class="col-md-12">
-      <div class="col-md-6">
+    <div class="col-md-6">
       <p *ngFor="let cBreak of craneBreakList">
         ({{cBreak.type}}) {{cBreak.startDate | date: 'HH:mm'}} - {{cBreak.endDate | date: 'HH:mm'}}
       </p>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group pull-right">
-      <div class="col-md-4">
-        <label for="name">Init delay (min)</label>
-        <input #initDelay type="text" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="0">
-      </div>
-      <div class="col-sm-4" >
-        <label for="name">CraneBreak StartTime</label>
-        <input #cbStartTime type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="17:00">
-      </div>
-      <div class="col-sm-4" >
-        <label for="name">CraneBreak (min)</label>
-        <input #cbMinutes type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="45">
-      </div>
-
-
-      <mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider>
-
-
     </div>
-  </div>
+    <div class="col-md-6">
+      <div class="form-group pull-right">
+        <div class="col-md-4">
+          <label for="name">Init delay (min)</label>
+          <input #initDelay type="text" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="0">
+        </div>
+        <div class="col-sm-4">
+          <label for="name">CraneBreak StartTime</label>
+          <input #cbStartTime type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="17:00">
+        </div>
+        <div class="col-sm-4">
+          <label for="name">CraneBreak (min)</label>
+          <input #cbMinutes type="text" [disabled]="!isAddCBChecked" class="form-control" [ngClass]="{disabled : simStarted}" placeholder="45">
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm2">
+              <img style="float:left" src="./src/assets/images/wind.png" height="45px" alt="">
+            </div>
+            <div class="col-sm2">
+              <mat-slider #slWind #slWind min="0" max="5" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slWindValue"></mat-slider>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-sm2">
+              <img style="float:left" src="./src/assets/images/sun.png" height="45px" alt="">
+            </div>
+            <div class="col-sm2">
+              <mat-slider #slRain min="0" max="2" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slRainValue"></mat-slider>
+            </div>
+          </div>
+
+          <div class="col-sm2">
+            <img style="float:left" src="./src/assets/images/happy.png" height="30px" alt="">
+          </div>
+          <div class="col-sm2">
+            <mat-slider #slHappiness min="-1" max="1" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slHappinessValue"></mat-slider>
+
+          </div>
+          <!-- <div class="col-sm2">
+                  <img style="float:right" src="./src/assets/images/sad.png" height="30px" alt=""> 
+              </div> -->
+
+
+
+
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">

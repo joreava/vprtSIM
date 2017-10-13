@@ -6,7 +6,8 @@ import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter, 
 import { Crane } from '../model/Crane';
 import { Subscription } from 'rxjs';
 import { CraneBreak } from 'app/model/CraneBreak';
-import {MatSliderModule} from '@angular/material';
+import { MatSliderModule } from '@angular/material';
+import { SmartParameter } from '../model/SmartParameter'; 
 
 @Component({
   selector: 'app-crane',
@@ -25,6 +26,11 @@ export class CraneComponent implements OnInit, OnDestroy {
   @ViewChild('cbMinutes') inpcbMinutes: ElementRef;
   craneBreakList: CraneBreak[] = [];
   isAddCBChecked: boolean;
+  slWindValue: number = 0;
+ slRainValue: number = 0;
+  slHappinessValue: number = 0;
+
+  smartParamenter: SmartParameter;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
   }
 
@@ -38,6 +44,7 @@ export class CraneComponent implements OnInit, OnDestroy {
     this.sortPlanedListByDateASC();
     this.currentSimDate = new Date();
     this.isAddCBChecked = false;
+    //console.log('sli ' + this.slWindValue);
   }
 
   ngOnDestroy() {
@@ -73,6 +80,20 @@ export class CraneComponent implements OnInit, OnDestroy {
         uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
       }
     }
+  }
+
+  getSmartParameter()
+  {
+    let sp = new SmartParameter();
+    sp.craneId  = this.crane.idCrane;
+    sp.happinessFactor = this.slHappinessValue;
+    sp.rainPower = this.slRainValue;
+    sp.windPower = this.slWindValue;
+    console.log(`Crane ${this.crane.idCrane} 
+    h: ${sp.happinessFactor} 
+    r: ${sp.rainPower} 
+    w: ${sp.windPower}`);
+    return sp;
   }
 
   SetSimDate(): void {
@@ -227,8 +248,8 @@ export class CraneComponent implements OnInit, OnDestroy {
 }
 
 function randomSeconds() {
-  const min = -1000;
-  const max = 60;
+  const min = -60;
+  const max = 180;
   const rand = Math.floor(Math.random() * (max - min)) + min;
   return 1000 * rand;
 }

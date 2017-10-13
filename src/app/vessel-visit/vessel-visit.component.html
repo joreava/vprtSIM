@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-      <app-crane  *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>
+      <app-crane #craneCmp *ngFor="let craneEl of vesselVisit.craneList" [crane]="craneEl"></app-crane>
 </div>
 <ng-template #showLoading>
   <div class="container">

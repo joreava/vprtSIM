@@ -5,10 +5,11 @@ import { Unit } from './../model/Unit';
 import { Crane } from './../model/Crane';
 import { VesselVisit } from './../model/VesselVisit';
 import { BackEndService } from './../shared/services/backEnd.service';
-import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ViewChildren,ElementRef, QueryList, OnDestroy } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { parseString } from 'xml2js';
 import { Subscription } from 'rxjs/Subscription';
+import { SmartParameter } from './../model/SmartParameter';
 
 @Component({
   selector: 'app-vessel-visit',
@@ -27,6 +28,8 @@ export class VesselVisitComponent implements OnInit {
   busy: Subscription;
   busyXVSim: Subscription;
   loading: boolean;
+  smartParameterList = new Array<SmartParameter>();
+  @ViewChildren('craneCmp') craneComponents: QueryList<CraneComponent>;
   constructor(private backEndService: BackEndService, private vesselToCraneService: VesselToCraneService) {
 
   }
@@ -63,13 +66,26 @@ export class VesselVisitComponent implements OnInit {
       this.simSpeed = this.inpSimSpeed.nativeElement.value !== '' ?
       this.inpSimSpeed.nativeElement.value :
       this.inpSimSpeed.nativeElement.placeholder;
-
-      this.backEndService.startSimulator().subscribe(data => console.log(data));
+      this.getCraneParameters();
+      this.backEndService.startSimulator(this.smartParameterList).subscribe(data => console.log(data));
       this.simStarted = true;
+
       this.interval = setInterval(() => {
         this.Sim();
       }, 1000 / this.simSpeed);
     }
+  }
+
+  getCraneParameters() {
+    this.craneComponents.forEach(cr =>
+    {
+      let sp = cr.getSmartParameter();
+      if(this.smartParameterList == null)
+      {
+        this.smartParameterList =  new Array<SmartParameter>();                
+      }
+      this.smartParameterList.push(sp);  
+    });
   }
 
   Sim() {
@@ -94,6 +110,7 @@ export class VesselVisitComponent implements OnInit {
 
   stopSim() {
     this.simStarted = false;
+    this.smartParameterList = null;
     this.vesselToCraneService.notifyOther(this.simStarted);
     clearInterval(this.interval);
   }

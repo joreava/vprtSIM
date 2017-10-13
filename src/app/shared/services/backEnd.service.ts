@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Subject } from 'rxjs/Subject';
+import { SmartParameter } from '../../model/SmartParameter';
 
 const CHAT_URL = 'ws://http://35.176.150.177:8080:3005';
 
@@ -76,9 +77,14 @@ private wsService: WebSocketService;
       .catch((error: any) => Observable.throw(error.json().error || 'Server error')); // ...errors if any
 
   }
-  startSimulator()
+  startSimulator(smartParameterList: Array<SmartParameter>)
   {
-    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/startSimulator/'," ") // ...using post request
+    let spJson : string;
+    spJson=JSON.stringify(smartParameterList);
+    console.log('>>>>>>>>>>>>>: '+spJson);
+    let headers = new Headers({'Content-Type': 'application/json; charset=utf-8' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/startSimulator/', spJson) // ...using post request
     .map((res: Response) => { console.log(res); });
   }
 
