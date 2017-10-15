@@ -96,7 +96,7 @@ export class CraneComponent implements OnInit, OnDestroy {
     return sp;
   }
 
-  SetSimDate(): void {
+  SetSimDate_o(): void {
     if (this.crane.unitPlannedList.some(u => !u.dateOfMoveSIM)) {
       let delay = this.inpInitDelay.nativeElement.value !== '' ?
         this.inpInitDelay.nativeElement.value :
@@ -105,6 +105,55 @@ export class CraneComponent implements OnInit, OnDestroy {
 
       for (let uPlanned of this.crane.unitPlannedList) {
         uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMove).getTime() + randomSeconds() + (this.initDelaySeconds));
+      }
+      this.SetCraneBreaks();
+      this.SetCraneBreaksUser();
+      console.log('CraneBreakList: '+ this.craneBreakList.length);
+      this.craneBreakList.forEach(cb =>
+        {
+          let startCb = new Date(cb.startDate);
+          let endCb = new Date(cb.endDate);
+
+          console.log(this.crane.idCrane + ' CB: T: ' + cb.type +
+          ' S: '+ dateToYMD(startCb) +
+          ' E: '+ dateToYMD(cb.endDate));
+          
+        })
+      for (let uPlanned of this.crane.unitPlannedList) {
+        // only if dateOfMove is null
+        let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM);
+        if (durationCB > 0) {
+          let previous = new Date(uPlanned.dateOfMoveSIM);
+          uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime() + durationCB);
+          let newprevious = new Date(uPlanned.dateOfMoveSIM);
+          /*console.log('Duration ' + durationCB +
+            ' Unit ' + uPlanned.idUnit +
+            'dateSim Update; ' + dateToYMD(previous) +
+            ' -> ' + dateToYMD(newprevious));*/
+        }
+
+      }
+    }
+  }
+
+  SetSimDate(): void {
+    if (this.crane.unitPlannedList.some(u => !u.dateOfMoveSIM)) {
+      let delay = this.inpInitDelay.nativeElement.value !== '' ?
+        this.inpInitDelay.nativeElement.value :
+        this.inpInitDelay.nativeElement.placeholder;
+      this.initDelaySeconds = delay * 60 * 1000;
+
+      let init = new Date(this.crane.unitPlannedList[0].dateOfMove);
+      let acum =0;
+      for (let uPlanned of this.crane.unitPlannedList) {
+        let randomSecs = randomSeconds();
+        acum = acum + randomSecs;
+        //console.log('Acum> '+acum)
+        uPlanned.dateOfMoveSIM = new Date(new Date(init).getTime() + acum + (this.initDelaySeconds));
+        console.log('------');
+        console.log(uPlanned.idUnit+' DatePlan'+uPlanned.dateOfMove);
+        console.log(uPlanned.idUnit+' DateSIM'+uPlanned.dateOfMoveSIM);
+        console.log('------');
       }
       this.SetCraneBreaks();
       this.SetCraneBreaksUser();
@@ -248,9 +297,10 @@ export class CraneComponent implements OnInit, OnDestroy {
 }
 
 function randomSeconds() {
-  const min = -60;
-  const max = 180;
+  const min = 180;
+  const max = 240;
   const rand = Math.floor(Math.random() * (max - min)) + min;
+  console.log(1000*rand)
   return 1000 * rand;
 }
 

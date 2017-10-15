@@ -87,12 +87,14 @@
           <tr>
             <th>Unit Id</th>
             <th>Planned time</th>
+           
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let unitPl of crane.unitPlannedList">
             <td>{{unitPl.idUnit}}</td>
             <td>{{unitPl.dateOfMove | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
+            
           </tr>
         </tbody>
       </table>
