@@ -38,7 +38,7 @@
               <img style="float:left" src="./src/assets/images/wind.png" height="45px" alt="">
             </div>
             <div class="col-sm2">
-              <mat-slider #slWind #slWind min="0" max="5" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slWindValue"></mat-slider>
+              <mat-slider #slWind #slWind min="0" max="5"  (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slWindValue"></mat-slider>
             </div>
           </div>
 
@@ -49,7 +49,7 @@
               <img style="float:left" src="./src/assets/images/sun.png" height="45px" alt="">
             </div>
             <div class="col-sm2">
-              <mat-slider #slRain min="0" max="2" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slRainValue"></mat-slider>
+              <mat-slider #slRain min="0" max="2"   (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slRainValue"></mat-slider>
             </div>
           </div>
 
@@ -57,7 +57,7 @@
             <img style="float:left" src="./src/assets/images/happy.png" height="30px" alt="">
           </div>
           <div class="col-sm2">
-            <mat-slider #slHappiness min="-1" max="1" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slHappinessValue"></mat-slider>
+            <mat-slider #slHappiness min="-1" max="1" (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slHappinessValue"></mat-slider>
 
           </div>
           <!-- <div class="col-sm2">

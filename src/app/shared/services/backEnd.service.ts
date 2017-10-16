@@ -88,6 +88,20 @@ private wsService: WebSocketService;
     .map((res: Response) => { console.log(res); });
   }
 
+  sendSmartParameters(smartParam: SmartParameter) 
+  {
+    let spJson: string;
+    spJson = JSON.stringify(smartParam);
+    console.log('>> sendSmartParameters ' + spJson);
+    let headers = new Headers({'Content-Type': 'application/json; charset=utf-8' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/smartParametersUpdate/',spJson,options)
+    .map((res: Response) => { console.log(res); })
+    .catch((error: any) => 
+    Observable.throw(error.json().error || 'Server error')); // ...errors if any;
+    
+  }
+
   stopSimulator()
   {
     return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/stopSimulator/'," ") // ...using post request

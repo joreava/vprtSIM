@@ -36,13 +36,12 @@ export class VesselVisitComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-  
     this.getVesselVisitFromN4();
   }
 
   ngOnDestroy() {
     clearInterval(this.interval);
-  }
+    }
 
   getVesselVisitFromN4(): void {
     this.backEndService.getVeselVisitN4().subscribe(data => {

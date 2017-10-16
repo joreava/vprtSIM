@@ -44,7 +44,7 @@ export class CraneComponent implements OnInit, OnDestroy {
     this.sortPlanedListByDateASC();
     this.currentSimDate = new Date();
     this.isAddCBChecked = false;
-    //console.log('sli ' + this.slWindValue);
+
   }
 
   ngOnDestroy() {
@@ -62,6 +62,13 @@ export class CraneComponent implements OnInit, OnDestroy {
     this.SetSimDate();
     this.Sim();
   }
+
+  onInputChange() {
+    let sp = new SmartParameter();
+    sp=this.getSmartParameter();
+    this.backEndService.sendSmartParameters(sp).subscribe((res) => console.log(res));
+  }
+
   OnStopSim() {
     console.log(this.crane.idCrane + ', stopping simulation');
     this.currentSimDate = null;
@@ -126,10 +133,7 @@ export class CraneComponent implements OnInit, OnDestroy {
           let previous = new Date(uPlanned.dateOfMoveSIM);
           uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime() + durationCB);
           let newprevious = new Date(uPlanned.dateOfMoveSIM);
-          /*console.log('Duration ' + durationCB +
-            ' Unit ' + uPlanned.idUnit +
-            'dateSim Update; ' + dateToYMD(previous) +
-            ' -> ' + dateToYMD(newprevious));*/
+         
         }
 
       }
@@ -190,33 +194,7 @@ isInsideCraneBreak(date: Date) : number{
 
         console.log('DATE ------>' +dateToYMD(init));
       }
-
-
-    
-     /* console.log('CraneBreakList: '+ this.craneBreakList.length);
-      this.craneBreakList.forEach(cb =>
-        {
-          let startCb = new Date(cb.startDate);
-          let endCb = new Date(cb.endDate);
-
-          console.log(this.crane.idCrane + ' CB: T: ' + cb.type +
-          ' S: '+ dateToYMD(startCb) +
-          ' E: '+ dateToYMD(cb.endDate));
-          
-        })*/
-        /*
-      for (let uPlanned of this.crane.unitPlannedList) {
-        // only if dateOfMove is null
-        let durationCB = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM);
-        if (durationCB > 0) {
-          let previous = new Date(uPlanned.dateOfMoveSIM);
-          uPlanned.dateOfMoveSIM = new Date(new Date(uPlanned.dateOfMoveSIM).getTime() + durationCB);
-          let newprevious = new Date(uPlanned.dateOfMoveSIM);
-          
-    }
-
-  }*/
-    }
+        }
   }
 
   SetCraneBreaks() {
