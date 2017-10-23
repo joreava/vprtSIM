@@ -93,7 +93,7 @@ export class CraneComponent implements OnInit, OnDestroy {
   {
     let sp = new SmartParameter();
     sp.craneId  = this.crane.idCrane;
-    sp.happinessFactor = this.slHappinessValue;
+    sp.happinessFactor = (-1) * this.slHappinessValue;
     sp.rainPower = this.slRainValue;
     sp.windPower = this.slWindValue;
     console.log(`Crane ${this.crane.idCrane} 
@@ -166,13 +166,17 @@ isInsideCraneBreak(date: Date) : number{
    
       let init = new Date(this.crane.unitPlannedList[0].dateOfMove);
 
-   
+      let index = 0;
       for (let uPlanned of this.crane.unitPlannedList) {
         let craneBreakSeconds =0;
 
         let randomSecs = randomSeconds();
      
         //console.log('Acum> '+acum)
+        if(index === 0)
+        {
+          randomSecs = 0;
+        }
         uPlanned.dateOfMoveSIM = new Date(new Date(init).getTime() + randomSecs + (this.initDelaySeconds));
         
         let insideCbBreak = this.IsInsideCraneBreak(uPlanned.dateOfMoveSIM);
@@ -193,6 +197,7 @@ isInsideCraneBreak(date: Date) : number{
         init = new Date(uPlanned.dateOfMoveSIM);
 
         console.log('DATE ------>' +dateToYMD(init));
+        index++;
       }
         }
   }
@@ -221,7 +226,9 @@ isInsideCraneBreak(date: Date) : number{
 
   SetCraneBreaksUser() {
 
-  if (!this.isAddCBChecked) {
+    let userCbrek = this.craneBreakList.filter(cb=> cb.type=='U').length;
+
+  if (!this.isAddCBChecked || userCbrek>0) {
     return;
   }
 

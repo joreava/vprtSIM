@@ -2483,7 +2483,7 @@
     <permission id='LINE_LOAD' />
     <permission id='LINE_LOAD' />
   </flags>
-  <work-instruction sequence='1' move-kind='LOAD' crane-lane='0' door-direction='A' lift-type='SINGLE' associated-unit-id-1='' associated-unit-id-2='' associated-unit-id-3='' bay-center-offset-cm='0' estimated-move-time='2017-10-13T07:57:07'>
+  <work-instruction sequence='1' move-kind='LOAD' crane-lane='0' door-direction='A' lift-type='SINGLE' associated-unit-id-1='' associated-unit-id-2='' associated-unit-id-3='' bay-center-offset-cm='0' estimated-move-time='2017-10-13T07:59:07'>
     <planned-position loc-type='VESSEL' location='1GM1405' block='B' row='38' column='09' tier='02' />
   </work-instruction>
 </unit>
