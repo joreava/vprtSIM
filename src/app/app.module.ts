@@ -8,12 +8,14 @@ import { VesselVisitComponent } from './vessel-visit/vessel-visit.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material';
-
+import { StompService } from 'ng2-stomp-service';
+import { AddCraneComponent } from './add-crane/add-crane.component';
 @NgModule({
   declarations: [
     AppComponent,
     CraneComponent,
     VesselVisitComponent,
+    AddCraneComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import {MatSliderModule} from '@angular/material';
     BrowserAnimationsModule,
     MatSliderModule
   ],
-  providers: [],
+  providers: [StompService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

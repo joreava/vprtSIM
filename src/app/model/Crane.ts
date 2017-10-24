@@ -1,5 +1,8 @@
+import { CraneBreak } from './CraneBreak';
 import { Unit } from '../model/Unit';
 export class Crane {
+
+  craneBreakList: CraneBreak[] = [];
 
    constructor(idcrane: string)
 {

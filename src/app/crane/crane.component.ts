@@ -24,7 +24,7 @@ export class CraneComponent implements OnInit, OnDestroy {
   @ViewChild('initDelay') inpInitDelay: ElementRef;
   @ViewChild('cbStartTime') inpcbStartTime: ElementRef;
   @ViewChild('cbMinutes') inpcbMinutes: ElementRef;
-  craneBreakList: CraneBreak[] = [];
+  //craneBreakList: CraneBreak[] = [];
   isAddCBChecked: boolean;
   slWindValue: number = 0;
  slRainValue: number = 0;
@@ -115,8 +115,8 @@ export class CraneComponent implements OnInit, OnDestroy {
       }
       this.SetCraneBreaks();
       this.SetCraneBreaksUser();
-      console.log('CraneBreakList: '+ this.craneBreakList.length);
-      this.craneBreakList.forEach(cb =>
+      console.log('CraneBreakList: '+ this.crane.craneBreakList.length);
+      this.crane.craneBreakList.forEach(cb =>
         {
           let startCb = new Date(cb.startDate);
           let endCb = new Date(cb.endDate);
@@ -142,7 +142,7 @@ export class CraneComponent implements OnInit, OnDestroy {
 
 isInsideCraneBreak(date: Date) : number{
 
-  this.craneBreakList.forEach(cb=>
+  this.crane.craneBreakList.forEach(cb=>
   {
     console.log('Date: '+date+ 'Start: '+cb.startDate+ 'End: '+cb.endDate )
     if(cb.startDate.getTime()< date.getTime() && date.getTime() < cb.endDate.getTime())
@@ -203,7 +203,7 @@ isInsideCraneBreak(date: Date) : number{
   }
 
   SetCraneBreaks() {
-    if (this.craneBreakList.length > 0) { return; }
+    if (this.crane.craneBreakList.length > 0) { return; }
 
     this.crane.unitPlannedList.forEach((uPlanned, index) => {
       if (index < this.crane.unitPlannedList.length - 1) {
@@ -217,7 +217,7 @@ isInsideCraneBreak(date: Date) : number{
           cbreak.endDate = new Date(this.crane.unitPlannedList[index + 1].dateOfMove);
           // Planned Crane Breaks
           cbreak.type = 'P';
-          this.craneBreakList.push(cbreak);
+          this.crane.craneBreakList.push(cbreak);
           
         }
       }
@@ -226,7 +226,7 @@ isInsideCraneBreak(date: Date) : number{
 
   SetCraneBreaksUser() {
 
-    let userCbrek = this.craneBreakList.filter(cb=> cb.type=='U').length;
+    let userCbrek = this.crane.craneBreakList.filter(cb=> cb.type=='U').length;
 
   if (!this.isAddCBChecked || userCbrek>0) {
     return;
@@ -256,12 +256,12 @@ isInsideCraneBreak(date: Date) : number{
    
     cBreak.endDate = new Date(cBreak.startDate.getTime() + craneBreakMinutes);
     cBreak.type = 'U';
-    this.craneBreakList.push(cBreak);
+    this.crane.craneBreakList.push(cBreak);
     console.log('-----------------CraneBreak added by user: ' + dateToYMD(cBreak.startDate) + '-> ' + dateToYMD(cBreak.endDate));
   }
 
   IsInsideCraneBreak(date: Date): number {
-    let cbo = this.craneBreakList.find(cb =>
+    let cbo = this.crane.craneBreakList.find(cb =>
       (new Date(date).getTime() > new Date(cb.startDate).getTime())
       &&
       (new Date(date).getTime() < new Date(cb.endDate).getTime()));

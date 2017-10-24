@@ -1,0 +1,2453 @@
+<payload>
+  <parameters/>
+  <additional-info>
+    <field id="requestType" value="carrierVisitUpdate"/>
+    <field id="fieldChanges" value=""/>
+    <field id="craneId" value="SQC59"/>
+    <field id="visitType" value="VESSEL"/>
+  </additional-info>
+  <crane-work-lists>
+    <crane id="SQC59">
+      <work-shift pow="11" name="" startTime="1970-01-01 01:00:00.0" production="280"/>
+      <work-shift pow="11" name="QC EVENING" startTime="2015-07-27 15:00:00.0" production="360"/>
+      <work-shift pow="11" name="RGC DAY" startTime="2015-07-27 07:00:00.0" production="360"/>
+      <work-shift pow="11" name="RGC NIGHT" startTime="2015-07-26 23:00:00.0" production="360"/>
+      <work-shift pow="11" name="QC EVENING" startTime="2015-07-26 15:00:00.0" production="360"/>
+      <work-shift pow="11" name="QC EVENING" startTime="2015-07-24 15:00:00.0" production="360"/>
+      <work-shift pow="11" name="RGC DAY" startTime="2015-07-24 07:00:00.0" production="360"/>
+      <work-shift pow="11" name="RGC NIGHT" startTime="2015-07-23 23:00:00.0" production="360"/>
+      <work-shift pow="11" name="QC EVENING" startTime="2015-07-23 15:00:00.0" production="360"/>
+      <work-shift pow="11" name="SQC DAY" startTime="2016-04-20 07:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC EVENING" startTime="2016-04-20 15:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC NIGHT" startTime="2016-04-20 23:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC DAY" startTime="2016-04-21 07:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC EVENING" startTime="2016-04-21 15:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC NIGHT" startTime="2016-04-21 23:00:00.0" production="300"/>
+      <work-shift pow="11" name="SQC57" startTime="2017-10-12 13:00:00.0" production="200"/>
+      <work-queue name="1GM-disch-17A" deck="A" row="18" vessel-lcg="7029" configuration="CONFIGURED" bollard="A26" bollard-offset-cm="-268">
+        <units>
+          <unit id="MWCU6263421" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="19" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="6" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU9041408" gross-weight="4600.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="21" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="1" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU0037650" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="21" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="2" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWCU6562633" gross-weight="4700.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="21" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="3" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWMU6391700" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="21" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="4" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWCU6664281" gross-weight="4600.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="21" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWMU6370667" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="19" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="7" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWCU6282421" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="19" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="8" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:42:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU9015775" gross-weight="4700.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="19" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:45:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MNBU3364735" gross-weight="4300.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="19" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="10" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:51:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU9081340" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="17" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="11" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PONU4835425" gross-weight="4900.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="17" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="12" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PONU4914355" gross-weight="4800.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="17" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="13" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWMU6352771" gross-weight="4600.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="17" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="14" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MMAU1136721" gross-weight="4400.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="17" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="15" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU9107969" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="15" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="1" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T07:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MMAU1221546" gross-weight="4400.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="15" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="2" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWMU6337587" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="15" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="3" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MNBU3172922" gross-weight="4400.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="15" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="19" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MMAU1079128" gross-weight="4300.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="15" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="20" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU1027105" gross-weight="4400.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="13" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="4" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWCU6276769" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="13" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MMAU1044651" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="13" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="6" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PONU4827271" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="13" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="24" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MMAU1093928" gross-weight="4400.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="13" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="25" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSWU9106258" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="11" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="7" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWMU6422436" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="11" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="8" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:39:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PONU4765729" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="11" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T08:48:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MWCU6565355" gross-weight="4500.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="11" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="29" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="DAYU6702506" gross-weight="4300.0" iso-code="4530" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="18" column="11" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="30" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+        </units>
+      </work-queue>
+      <work-queue name="1GM-disch-21A" deck="A" row="22" vessel-lcg="5602" configuration="CONFIGURED" bollard="A27" bollard-offset-cm="-583">
+        <units>
+          <unit id="MRKU9128995" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="08" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="38" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:48:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MRKU9346148" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="06" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="46" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MRKU8904040" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="08" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="48" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MRKU9113193" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="06" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="36" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:42:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MRKU7609672" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="00" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="30" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MRKU8164874" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="00" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="40" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSKU5806355" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="04" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="34" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSKU4038294" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="02" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="32" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSKU5966820" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="04" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="44" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="MSKU5820034" gross-weight="26700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="true" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="21" column="02" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="42" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1745" gross-weight="12900.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="08" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="49" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1756" gross-weight="8500.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="04" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="14" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1758" gross-weight="20200.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="02" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="33" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1765" gross-weight="8800.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="01" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="8" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1766" gross-weight="8800.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="02" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="12" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:48:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1767" gross-weight="8900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="00" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="10" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:39:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1241" gross-weight="32600.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="01" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="18" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1227" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="05" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="10" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:42:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1226" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="07" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="6" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1223" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="10" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="28" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1848" gross-weight="29300.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="00" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1150" gross-weight="6900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="02" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="11" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:45:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1927" gross-weight="32600.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="03" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="14" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1928" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="09" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="2" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1930" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="01" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="17" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1942" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="10" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="29" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1943" gross-weight="22500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="01" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="7" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1944" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="09" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="3" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1955" gross-weight="22800.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="00" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="41" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1960" gross-weight="22800.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="02" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="43" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1068" gross-weight="12300.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="08" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="39" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:51:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1064" gross-weight="22200.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="06" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="47" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1063" gross-weight="22200.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="04" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="45" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1060" gross-weight="8500.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="03" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="6" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1011" gross-weight="20700.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="00" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="31" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1010" gross-weight="7000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="09" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="1" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T09:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2094" gross-weight="19100.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="04" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="35" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:39:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2096" gross-weight="17200.0" iso-code="2200" length-mm="6068" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="23" column="06" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="37" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:45:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0830" gross-weight="8100.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="05" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="4" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0829" gross-weight="8000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="06" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="15" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0773" gross-weight="6800.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="03" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0743" gross-weight="6500.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="05" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="3" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0741" gross-weight="7000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="10" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="17" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0695" gross-weight="7300.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="08" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="16" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T11:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0638" gross-weight="7500.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="07" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="2" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0562" gross-weight="6700.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="04" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="13" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0416" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="03" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="13" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:51:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0413" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="05" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0409" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="22" column="07" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T10:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+        </units>
+      </work-queue>
+      <work-queue name="1GM-disch-29A" deck="A" row="30" vessel-lcg="2728" configuration="CONFIGURED" bollard="A28" bollard-offset-cm="824">
+        <units>
+          <unit id="PROJG0267" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="03" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="10" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0263" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="02" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="19" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0262" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="01" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="13" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:42:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0261" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="00" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="16" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1692" gross-weight="24700.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="04" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="39" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1753" gross-weight="25000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="03" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="19" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1261" gross-weight="25700.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="06" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="45" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1260" gross-weight="25700.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="07" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="10" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1243" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="08" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="30" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1238" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="06" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="27" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:42:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1235" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="00" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="18" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1230" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="09" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="3" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1225" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="04" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="24" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1224" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="05" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1831" gross-weight="29400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="08" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="29" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:51:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1834" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="05" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="8" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1838" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="03" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="11" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1840" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="01" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="14" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:48:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1841" gross-weight="29400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="07" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1844" gross-weight="29400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="09" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="2" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:57:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1845" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="06" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="26" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:39:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1846" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="02" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="20" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1847" gross-weight="29400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="10" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="32" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1850" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="00" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="17" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1851" gross-weight="29500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="04" tier="84"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="23" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1929" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="07" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="6" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1932" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="01" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="15" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1934" gross-weight="32400.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="10" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="33" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1940" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="03" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="12" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:39:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1941" gross-weight="32500.0" iso-code="45R8" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="02" tier="82"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="21" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1041" gross-weight="26400.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="01" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="25" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1034" gross-weight="23900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="08" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="49" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:27:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1033" gross-weight="23900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="09" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="4" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:06:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1032" gross-weight="23900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="10" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="54" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:33:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1031" gross-weight="23900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="07" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="9" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:24:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2023" gross-weight="25100.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="01" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="24" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2024" gross-weight="25000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="02" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="34" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:09:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1006" gross-weight="25200.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="00" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="29" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:48:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG1004" gross-weight="25300.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="10" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="55" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0940" gross-weight="25600.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="09" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="5" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2212" gross-weight="25800.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="04" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="40" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG2244" gross-weight="25800.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="05" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="15" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:51:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0767" gross-weight="24400.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="05" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="14" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:45:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0628" gross-weight="23900.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="06" tier="80"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="44" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0575" gross-weight="26000.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="03" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="20" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:15:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0574" gross-weight="25600.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="08" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="50" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:30:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0431" gross-weight="26400.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="00" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="30" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0430" gross-weight="26300.0" iso-code="4500" length-mm="12192" height-mm="2895" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="02" tier="78"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="35" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:12:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0308" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="10" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="31" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T15:00:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0307" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="09" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="1" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T12:54:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0306" gross-weight="3900.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="08" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="28" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:45:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0304" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="07" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="4" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:03:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0301" gross-weight="3800.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="06" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="25" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:36:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0275" gross-weight="3700.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="05" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="7" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T13:18:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+          <unit id="PROJG0274" gross-weight="3700.0" iso-code="4200" length-mm="12192" height-mm="2591" width-mm="2438" is-hazardous="false" tank-rail-type="UNKNOWN">
+            <current-position loc-type="VESSEL" location="1GM1405" block="A" row="30" column="04" tier="86"/>
+            <flags>
+              <permission id="PREAN_ DELIVER_PRM"/>
+              <permission id="RTO_PP"/>
+              <permission id="RTO_PD"/>
+              <permission id="LINE_TRUCK_PICKUP"/>
+              <permission id="LINE_RAIL_PICKUP"/>
+              <permission id="LINE_LANDSIDE_PICKUP"/>
+              <permission id="LINE_BARGE_PICKUP"/>
+              <permission id="ETT_DRAY_IN_PERMISSION"/>
+              <permission id="LINE_DISCHARGE"/>
+              <permission id="RTO_CB"/>
+            </flags>
+            <work-instruction sequence="22" move-kind="DSCH" crane-lane="0" door-direction="U" lift-type="SINGLE" associated-unit-id-1="" associated-unit-id-2="" associated-unit-id-3="" bay-center-offset-cm="0" estimated-move-time="2017-10-13T14:21:07">
+              <planned-position loc-type="YARD" location="APM" row="" column="" tier="0"/>
+            </work-instruction>
+          </unit>
+        </units>
+      </work-queue>
+    </crane>
+  </crane-work-lists>
+</payload>

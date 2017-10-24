@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Subject } from 'rxjs/Subject';
 import { SmartParameter } from '../../model/SmartParameter';
+import {Parser} from 'xml2js';
 
 const CHAT_URL = 'ws://http://35.176.150.177:8080:3005';
 
@@ -95,7 +96,7 @@ private wsService: WebSocketService;
     console.log('>> sendSmartParameters ' + spJson);
     let headers = new Headers({'Content-Type': 'application/json; charset=utf-8' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/smartParametersUpdate/',spJson,options)
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/smartParametersUpdate/', spJson, options)
     .map((res: Response) => { console.log(res); })
     .catch((error: any) => 
     Observable.throw(error.json().error || 'Server error')); // ...errors if any;
@@ -104,7 +105,7 @@ private wsService: WebSocketService;
 
   stopSimulator()
   {
-    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/stopSimulator/'," ") // ...using post request
+    return this.http.post('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/stopSimulator/', '') // ...using post request
     .map((res: Response) => { console.log(res); });
   }
 
@@ -118,6 +119,30 @@ private wsService: WebSocketService;
     this.sendXvelaFile(xml)).flatMap(r=> this.getVeselVisitN4());
     return result$;
  }
+
+postNewCrane(): Observable<any>
+{
+  console.log('loading');
+let parser = new Parser(); 
+ let result = this.http.get('./src/assets/xvelaVesselReady_NewCrane.xml')
+  .map(res => {
+    console.log('getXvelaVesselReadySim>> xml loaded');
+    //console.log('text: '+res.text());
+    return res.text();
+   
+  })
+  return result;
+//console.log('result: '+result)
+
+  //this.sendXvelaFile(xml)).flatMap(r=> this.getVeselVisitN4());
+  //return result$;
+
+ 
+  /*let jsonobj$ = parser.parseString(xmlString);
+  console.log('json'+jsonobj$);
+  return jsonobj$;*/
+}
+
  getXvelaVesselReadySim_Orginial(): Observable<any>
  {
     return this.http.get('./src/assets/xvelaVesselReady.xml');

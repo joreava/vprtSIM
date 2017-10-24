@@ -1,0 +1,22 @@
+
+
+
+<div class="row">
+  <div class="col-md-4">
+    <label for="name">Crane Name</label>
+    <input #craneName type="text" class="form-control" placeholder="QC59">
+    <label for="name">Start time</label>
+    <input #startTime type="text" class="form-control" placeholder="12:00">
+    <label for="name">End time</label>
+    <input #endTime type="text" class="form-control" placeholder="18:00">
+    <label for="name">Crane Break</label>
+    <input #cBreakStart type="text" class="form-control" placeholder="14:00">
+    <label for="name">Crane Break Dration</label>
+    <input #cBreakDuration type="text" class="form-control" placeholder="60">
+    <label for="name"># Units</label>
+    <input #numUnits type="text" class="form-control" placeholder="50">
+    <label for="name">Avg unit secs</label>
+    <input #avgunits type="text" class="form-control" placeholder="180">
+  </div>
+</div>
+<button type="button"  class="btn btn-success" (click)="createCrane()">Create crane</button>
