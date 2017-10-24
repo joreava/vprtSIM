@@ -1,3 +1,4 @@
+import { Crane } from './../../model/Crane';
 
 import { Unit } from './../../model/Unit';
 import { WebSocketService } from './WebSocketService.service';
@@ -53,10 +54,11 @@ private wsService: WebSocketService;
     return result$;
   }
 
-  getVeselVisitN4(): Observable<VesselVisit> {
+  getVeselVisitN4(): Observable<any> {
     console.log('getVeselVisitN4>> getting vesselvist');
     let result$ = this.http.get('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/vesselVisit/')
-      .map(m => <VesselVisit>m.json());
+      .map(m =>  console.log('>>'+m.json()));
+        //<VesselVisit>m.json()});
     return result$;
   }
 
@@ -111,41 +113,31 @@ private wsService: WebSocketService;
 
  getXvelaVesselReadySim(): Observable<VesselVisit>
  {
-    let result$ = this.http.get('./src/assets/xvelaVesselReady.xml')
+    //let result$ = this.http.get('./src/assets/xvelaVesselReady.xml')
+    console.log('getXvelaVesselReadySim>> loading xml');
+    let result$ = this.http.get('assets/xvelaVesselReady.xml')
     .map(res => {
       console.log('getXvelaVesselReadySim>> xml loaded');
       return res.text();
     }).flatMap(xml=>
-    this.sendXvelaFile(xml)).flatMap(r=> this.getVeselVisitN4());
+    this.sendXvelaFile(xml)).flatMap(r => this.getVeselVisitN4()).catch((error: any) => 
+    Observable.throw(error.json().error || 'Server error')); // ...errors if any;;
     return result$;
  }
 
-postNewCrane(): Observable<any>
+postNewCrane(vesselVisit: VesselVisit): Observable<any>
 {
-  console.log('loading');
-let parser = new Parser(); 
- let result = this.http.get('./src/assets/xvelaVesselReady_NewCrane.xml')
-  .map(res => {
-    console.log('getXvelaVesselReadySim>> xml loaded');
-    //console.log('text: '+res.text());
-    return res.text();
-   
-  })
-  return result;
-//console.log('result: '+result)
-
-  //this.sendXvelaFile(xml)).flatMap(r=> this.getVeselVisitN4());
-  //return result$;
-
- 
-  /*let jsonobj$ = parser.parseString(xmlString);
-  console.log('json'+jsonobj$);
-  return jsonobj$;*/
+  let headers = new Headers({ 'Content-Type':  'application/json' });
+  let options = new RequestOptions({ headers: headers });
+  return this.http.put('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/xvelaVesselReadyAdd/',  JSON.stringify(vesselVisit), options)
+  .map((res) => {  console.log('xvelaVesselReadyAdd>> json sent'); }) // ...and calling .json() on the response to return data
+  .catch((error: any) => 
+  Observable.throw(error.json().error || 'Server error')); // ...errors if any
 }
 
  getXvelaVesselReadySim_Orginial(): Observable<any>
  {
-    return this.http.get('./src/assets/xvelaVesselReady.xml');
+    return this.http.get('assets/xvelaVesselReady.xml');
  }
 sendXvelaFile(xmlBody): Observable<boolean>
 {
@@ -157,8 +149,6 @@ sendXvelaFile(xmlBody): Observable<boolean>
   .catch((error: any) => 
   Observable.throw(error.json().error || 'Server error')); // ...errors if any
 }
-
-
 
 }
 

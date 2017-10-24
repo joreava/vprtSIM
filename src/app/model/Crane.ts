@@ -2,14 +2,16 @@ import { CraneBreak } from './CraneBreak';
 import { Unit } from '../model/Unit';
 export class Crane {
 
-  craneBreakList: CraneBreak[] = [];
 
-   constructor(idcrane: string)
+
+   constructor()
 {
-    this.idCrane = idcrane;
+    //this.idCrane = idcrane;
+    
 }
 
   public idCrane: string
   public unitExecutedList: Unit[] = [];
   public unitPlannedList: Unit[] = [];
+  public craneBreakList: CraneBreak[] = [];
   }

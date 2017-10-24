@@ -5,22 +5,25 @@ import { Unit } from './../model/Unit';
 import { Crane } from './../model/Crane';
 import { VesselVisit } from './../model/VesselVisit';
 import { BackEndService } from './../shared/services/backEnd.service';
-import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ViewChildren,ElementRef, QueryList, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ViewChildren, ElementRef, QueryList, OnDestroy } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { parseString } from 'xml2js';
 import { Subscription } from 'rxjs/Subscription';
 import { SmartParameter } from './../model/SmartParameter';
 import { StompService } from 'ng2-stomp-service';
-import {Parser} from 'xml2js';
+import { Parser } from 'xml2js';
+import { MessengerService } from '../shared/services/messenger.service';
 
 @Component({
   selector: 'app-vessel-visit',
   templateUrl: './vessel-visit.component.html',
   styleUrls: ['./vessel-visit.component.css'],
-  providers: [BackEndService, VesselToCraneService],
+  providers: [BackEndService, VesselToCraneService, StompService],
 })
-export class VesselVisitComponent implements OnInit {
-
+export class VesselVisitComponent implements OnInit, OnDestroy {
+  message: any;
+  subscription: Subscription
+  subscriptionSocket: Subscription
   vesselVisit: VesselVisit = new VesselVisit();
   simStarted: boolean;
   @ViewChild('intervalSpeed') inpSimSpeed: ElementRef;
@@ -31,63 +34,75 @@ export class VesselVisitComponent implements OnInit {
   loading: boolean;
   smartParameterList = new Array<SmartParameter>();
   @ViewChildren('craneCmp') craneComponents: QueryList<CraneComponent>;
-  private subscription: any;
+  //private subscription: any;
   //socket = io('http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/pspo-ws');
-  constructor(private backEndService: BackEndService, 
+  constructor(private backEndService: BackEndService,
     private vesselToCraneService: VesselToCraneService,
-    stomp: StompService) {
-/*
-      //configuration
-  stomp.configure({
-    host: 'http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/vprtSIM',
-    debug: true,
-    queue: {'init': false}
+    private stomp: StompService,
+    private messenger: MessengerService) {
+    this.subscription = this.messenger.getMessage()
+      .subscribe(message => this.processMessage(message));
+
+    
+    //configuration
+    stomp.configure({
+      host: 'http://35.176.150.177:8080/vprt-0.0.1-SNAPSHOT/vprtSIMsckt',
+      debug: true,
+      queue: {'init': false}
+    });
+  
+   //start connection
+    stomp.startConnect().then(() => {
+    stomp.done('init');
+    console.log('connected');
+    
+    //subscribe
+    this.subscriptionSocket = stomp.subscribe('/topic/vprtSIM', this.response);
+    
+    //send data
+    //stomp.send('destionation',{"data":"data"});
+  
   });
+  
 
- //start connection
-  stomp.startConnect().then(() => {
-  stomp.done('init');
-  console.log('connected');
-  
-  //subscribe
-  this.subscription = stomp.subscribe('/vprtSIM', this.response);
-  
-  //send data
-  stomp.send('destionation',{"data":"data"});
-  
-  //unsubscribe
-  this.subscription.unsubscribe();
-  
-  //disconnect
-  stomp.disconnect().then(() => {
-    console.log( 'Connection closed' )
-  })
-  
-});
-*/
-  
   }
-
-
-ConnectToSocket()
-{
-
-}
-
   ngOnInit(): void {
     console.log('connecting to socket');
     this.loading = true;
     this.getVesselVisitFromN4();
- }
+  }
 
-//response
-public response = (data) => {
-  console.log('Stomp response: '+data);
-}
+  processMessage(incommingMessage: any)
+  {
+    let cr: Crane = <Crane> incommingMessage;
+    console.log('New crane received!');
+    this.vesselVisit.craneList.push(cr);
+    console.log('Crane added: ' + cr.idCrane);
+    let vVisit : VesselVisit = new VesselVisit();
+    vVisit.craneList.push(cr);
+    this.backEndService.postNewCrane(vVisit).subscribe(data => 
+      console.log('postNewCrane response: ' + data));
+  }
+
+  //response
+  public response = (data) => {
+    console.log('Stomp response: ');
+    console.log('Updating vessel visit');
+    this.vesselVisit = this.VesselVisitoFromJSON(data);
+    console.log(' vessel visit updated!');
+  }
 
   ngOnDestroy() {
+    console.log( 'Destroy' )
     clearInterval(this.interval);
-    }
+    this.subscription.unsubscribe();
+    this.subscriptionSocket.unsubscribe();
+    //disconnect
+    this.stomp.disconnect().then(() => {
+      console.log( 'Connection closed' );
+    })
+
+  }
 
   getVesselVisitFromN4(): void {
     this.backEndService.getVeselVisitN4().subscribe(data => {
@@ -98,8 +113,8 @@ public response = (data) => {
   }
 
   VesselVisitoFromJSON(json: VesselVisit): VesselVisit {
-    var result = new VesselVisit();
-    for (var key in json) {
+    let result = new VesselVisit();
+    for (let key in json) {
       if (result.hasOwnProperty(key)) {
         result[key] = json[key]
       }
@@ -109,8 +124,8 @@ public response = (data) => {
   OnStartSimulator(): void {
     if (!this.loading) {
       this.simSpeed = this.inpSimSpeed.nativeElement.value !== '' ?
-      this.inpSimSpeed.nativeElement.value :
-      this.inpSimSpeed.nativeElement.placeholder;
+        this.inpSimSpeed.nativeElement.value :
+        this.inpSimSpeed.nativeElement.placeholder;
       this.getCraneParameters();
       this.backEndService.startSimulator(this.smartParameterList).subscribe(data => console.log(data));
       this.simStarted = true;
@@ -121,14 +136,12 @@ public response = (data) => {
     }
   }
   getCraneParameters() {
-    this.craneComponents.forEach(cr =>
-    {
+    this.craneComponents.forEach(cr => {
       let sp = cr.getSmartParameter();
-      if(this.smartParameterList == null)
-      {
-        this.smartParameterList =  new Array<SmartParameter>();                
+      if (this.smartParameterList == null) {
+        this.smartParameterList = new Array<SmartParameter>();
       }
-      this.smartParameterList.push(sp);  
+      this.smartParameterList.push(sp);
     });
   }
 
@@ -144,19 +157,9 @@ public response = (data) => {
     });
     this.anyRemainingUnit();
   }
-  OnAddCrane()
-  {
-    let parser = new Parser();
-    let xml;
-    let json;
-    this.backEndService.postNewCrane().subscribe(data => {
-      xml = data
-      json = parser.parseString(xml)
-      //console.log('PARSE: '+data);
-      console.log('JSON: ' +JSON.stringify(json))
-    });
-    
-  }
+ 
+
+  
   OnStopSimulator(): void {
     if (this.simStarted) {
       this.backEndService.stopSimulator().subscribe(data => console.log(data));
@@ -174,23 +177,21 @@ public response = (data) => {
     this.simStarted = status;
   }
 
-anyRemainingUnit()
-{
-  let acum = 0;
-  this.vesselVisit.craneList.forEach(cr=>
-  {
-    acum = acum + cr.unitPlannedList.length;
-  })
+  anyRemainingUnit() {
+    let acum = 0;
+    this.vesselVisit.craneList.forEach(cr => {
+      acum = acum + cr.unitPlannedList.length;
+    })
 
-  if(acum === 0)
-  {
-    console.log('Simulation finished!');
-    this.OnStopSimulator();
+    if (acum === 0) {
+      console.log('Simulation finished!');
+      this.OnStopSimulator();
+    }
   }
-}
-
   OnSimXvelaVesselReady(): void {
-    if (!this.loading) {
+   
+    //if (!this.loading) {
+      alert('aa')
       this.loading = true;
       console.log('OnSimXvelaVesselReady STARTED!');
       //this.vesselVisit = null;
@@ -205,6 +206,6 @@ anyRemainingUnit()
         console.log(res[1]);
         this.loading = false;
       });
-    }
+    //}
   }
 }

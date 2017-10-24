@@ -2,7 +2,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="row">
       <div class="col-xs-8">
-        <img style="float:left" src="./src/assets/images/container-ship.png" height="120px" alt="">
+        <img style="float:left" src="assets/images/container-ship.png" height="120px" alt="">
         <h2 class="display-1">{{vesselVisit.vesselName}}</h2>
         <h3 class="display-2">{{vesselVisit.idVisit}}</h3>
       </div>
@@ -12,10 +12,8 @@
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <button type="button" ng-if="!vesselVisit" [ngClass]="{disabled : loading}" 
+            <button type="button" ng-if="!vesselVisit"         
             class="btn btn-primary" (click)="OnSimXvelaVesselReady()">SIM XvelaVesselReady</button>
-            <button type="button" ng-if="!vesselVisit" [ngClass]="{disabled : loading}" 
-            class="btn btn-primary" (click)="OnAddCrane()">Add Crane</button>
             <app-add-crane></app-add-crane>
           </div>
       <div class="col-xs-6">

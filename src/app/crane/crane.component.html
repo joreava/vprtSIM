@@ -14,7 +14,7 @@
 
   <div class="col-md-12">
     <div class="col-md-6">
-      <p *ngFor="let cBreak of craneBreakList">
+      <p *ngFor="let cBreak of crane.craneBreakList">
         ({{cBreak.type}}) {{cBreak.startDate | date: 'HH:mm'}} - {{cBreak.endDate | date: 'HH:mm'}}
       </p>
     </div>
@@ -35,7 +35,7 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm2">
-              <img style="float:left" src="./src/assets/images/wind.png" height="45px" alt="">
+              <img style="float:left" src="assets/images/wind.png" height="45px" alt="">
             </div>
             <div class="col-sm2">
               <mat-slider #slWind #slWind min="0" max="5"  (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slWindValue"></mat-slider>
@@ -46,7 +46,7 @@
 
           <div class="row">
             <div class="col-sm2">
-              <img style="float:left" src="./src/assets/images/sun.png" height="45px" alt="">
+              <img style="float:left" src="assets/images/sun.png" height="45px" alt="">
             </div>
             <div class="col-sm2">
               <mat-slider #slRain min="0" max="5"   (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="1" [(ngModel)]="slRainValue"></mat-slider>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="col-sm2">
-            <img style="float:left" src="./src/assets/images/happy.png" height="30px" alt="">
+            <img style="float:left" src="assets/images/happy.png" height="30px" alt="">
           </div>
           <div class="col-sm2">
             <mat-slider #slHappiness min="-4" max="4" (change)="onInputChange()" [thumb-label]="false" [tick-interval]="1" step="2" [(ngModel)]="slHappinessValue"></mat-slider>
